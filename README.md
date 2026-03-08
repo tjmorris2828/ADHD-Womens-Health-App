@@ -16,7 +16,7 @@ React + Capacitor iOS app for women with ADHD, optimized for fast daily check-in
 ## Run locally
 
 ```bash
-cd /Users/tj/.openclaw/workspace/adhd-womens-health-app
+cd /Users/tj/ADHD Womens Health App
 npm install
 npm run dev
 ```
