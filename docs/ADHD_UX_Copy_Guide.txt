@@ -1,0 +1,841 @@
+
+✦
+
+ADHD Women's Health App
+UX Copy & Voice Guide
+Every word in this app was written for an ADHD brain.
+No shame. No guilt. No walls of text. Just clear, warm, and encouraging language.
+
+
+SECTIONS IN THIS GUIDE
+
+#
+Section
+What It Covers
+01
+Brand Voice & Tone
+Who we sound like. 4 voice dimensions. When to adjust.
+02
+Language Rules
+Words we always use. Words that are banned. Why it matters.
+03
+Onboarding Copy
+Welcome flow, permissions, first-use copy
+04
+Navigation & Labels
+Tab names, screen titles, menu labels
+05
+Content Cards
+How to write health information for ADHD readers
+06
+Tracker Copy
+Log prompts, completion messages, streak language
+07
+Notifications & Reminders
+Push notifications, in-app alerts — dopamine-friendly
+08
+Empty States
+When there's nothing to show — no shame, always helpful
+09
+Error Messages
+When something goes wrong — calm, not alarming
+10
+CTAs & Buttons
+What every button says. Hierarchy. Action language.
+11
+Achievements & Milestones
+Celebration copy — genuine, not patronizing
+12
+Paywall & Subscription
+Upgrade prompts that don't feel manipulative
+
+01  Brand Voice & Tone
+The app has a distinct personality. Every screen, notification, and error message should sound like the same person — a knowledgeable, warm, ADHD-smart friend who happens to know a lot about women's health.
+
+The 4 Voice Dimensions
+Dimension
+We Are
+We Are Not
+Example
+Warmth
+Encouraging, safe, like a trusted friend
+Cheery, forced, corporate-friendly
+"Good to see you" not "Welcome back, user!"
+Clarity
+Direct, simple, one idea at a time
+Clinical, jargon-heavy, complex
+"Your estrogen is rising" not "Serum estradiol levels are ascending"
+Intelligence
+Respectful of user's intelligence, evidence-based
+Talking down, oversimplifying, hedging everything
+"Research suggests" not "some say" or "experts believe"
+Honesty
+Truthful about uncertainty, never overpromises
+Alarmist, sensationalist, confident when unsure
+"This is common in ADHD. We don't fully know why yet." 
+
+Tone Adjustments by Context
+Context
+Tone
+Example Phrase
+Onboarding
+Warm + low pressure. Like being welcomed home.
+"Take what you need. Skip what you don't."
+Daily check-in
+Casual + curious. A gentle nudge, not a demand.
+"How are you feeling today? (No wrong answers)"
+Health insights
+Informative + grounded. Fact-first, no drama.
+"This is called the luteal dip. It's real. It's hormonal."
+Symptom tracking
+Supportive + non-judgmental. Log, don't judge.
+"Logged. No one's keeping score here."
+Achievements
+Genuine + celebratory. Not over the top.
+"Seven days. That's real momentum."
+Errors
+Calm + helpful. Not alarming, never blaming.
+"Hmm, something went sideways. Let's try again."
+Paywall / upgrade
+Honest + low pressure. Never FOMO-based.
+"Unlock the full picture when you're ready."
+Missed sessions
+Warm re-welcome. Never guilt. Never streaks broken.
+"Hi again. Ready to pick back up?"
+
+The Voice Test: Read It Aloud
+Before finalizing any copy, read it aloud. If it sounds like a doctor's appointment waiting room sign, rewrite it. If it sounds like a guilt trip, delete it. If it sounds like your smartest, most supportive friend — ship it.
+
+02  Language Rules
+
+Words We Always Use
+Use This
+Why
+"Logged"
+Past tense confirms action. Feels complete, not in-progress.
+"This week" / "Today"
+Anchors user in time — critical for ADHD time blindness
+"Your body" / "Your cycle"
+Ownership language reinforces self-knowledge and agency
+"This is common"
+Normalizes ADHD and women's health experiences immediately
+"You can always come back"
+Removes pressure — ADHD users abandon when pressured
+"Here's what we know"
+Honest framing. Sets up evidence without overpromising.
+"Try this" / "One thing"
+Singularity. ADHD brains need one clear action, not a list.
+"Research suggests" / "Studies show"
+Credibility without false certainty
+"Notice" / "Pay attention to"
+Gentle observation — not alarm
+"Skip this for now"
+Exit ramp reduces anxiety and builds trust
+
+Banned Words & Phrases
+Never Write This
+Write This Instead
+Why It's Banned
+"You missed your log"
+"Ready when you are"
+No shame for non-use — ADHD users abandon apps that guilt them
+"Don't forget to..."
+"When you get a chance..."
+"Don't forget" triggers RSD and shame in ADHD
+"You should..."
+"One option is to..."
+Prescriptive language raises defensiveness
+"Warning"
+"Just a heads up"
+"Warning" triggers cortisol response — too alarming
+"Alert!" / "Urgent"
+"Something to notice"
+Urgency is a known ADHD trigger — avoid unless truly critical
+"Failure" / "Failed"
+"Didn't go through — try again"
+Failure language causes immediate emotional shutdown
+"You haven't logged in X days"
+"We missed you"
+Guilt-counting causes abandonment
+"Simple" / "Easy" / "Just"
+(remove the word)
+Minimizing language feels condescending to users who struggle
+"Complete your profile"
+"Add to your health picture"
+"Complete" implies deficiency — reframe as building
+"Premium" / "Pro" (features)
+"Full access" / "Unlock"
+"Premium" signals you're lesser without it
+"Crazy" / "Insane"
+(delete entirely)
+Ableist language — harmful to mental health users
+"Your ADHD brain"
+"Your brain" or "this is common with ADHD"
+Don't define the user by their diagnosis
+
+Reading Level Targets
+Content Type
+Target Grade Level
+Notes
+Notification copy
+Grade 6–7
+Short, simple, immediate clarity
+Card headlines
+Grade 6
+10 words max, zero jargon
+Card body text
+Grade 8
+Single idea per sentence
+Health education content
+Grade 9–10
+Accurate, but never medical-document level
+Error messages
+Grade 5
+Maximum simplicity under frustration
+Onboarding
+Grade 7
+Warm and clear, not dumbed down
+
+03  Onboarding Copy
+Onboarding is where trust is built or lost. Every screen must reduce friction, set honest expectations, and make the user feel seen — not assessed.
+
+Screen 1 — Welcome
+Hero headline
+"Finally. A health app that gets it."
+Note: Speaks directly to the experience of feeling unseen in healthcare.
+
+Sub-headline
+"Built for women who think differently — and want real answers about their health."
+
+CTA button
+"Let's get started"
+
+Skip option
+"I'll explore on my own"
+Note: Always give an exit. Never force a flow.
+
+Screen 2 — The Setup Frame
+Headline
+"We don't do wellness fluff here."
+
+Body copy
+"You'll find real research, honest explanations, and tools that work the way your brain works. Take what helps. Leave what doesn't."
+Note: 3 sentences max. Sets expectations clearly without intimidating.
+
+Next button
+"Show me →"
+
+Screen 3 — What to Track (optional setup)
+Headline
+"What matters to you right now?"
+
+Instruction
+"Pick one or two. You can always add more later."
+
+✗  NEVER WRITE THIS
+Please select all the health areas you want to track so we can personalize your experience:
+✓  WRITE THIS INSTEAD
+What's on your mind lately? (Pick 1–2)
+
+Options (chips)
+"My cycle  /  My mood  /  My energy  /  My hormones  /  My sleep  /  PMDD  /  Perimenopause  /  All of it"
+Note: Short labels only. No descriptions inside the chip.
+
+Screen 4 — Permissions (Notifications)
+Headline
+"One gentle nudge a day. That's it."
+
+Body copy
+"We'll check in once daily — and only when you want us to. You're in control."
+
+Allow button
+"Yes, send me gentle reminders"
+
+Deny button
+"No thanks — I'll check in on my own"
+
+Screen 5 — All Set
+Headline
+"You're in. Let's look at today."
+
+Body
+"Your first insight is ready. No setup required."
+
+CTA
+"See my Today →"
+
+04  Navigation & Labels
+
+Tab Bar Labels
+Tab
+Label
+Why This Word
+Tab 1
+TODAY
+Grounds user in the present — critical for time blindness
+Tab 2
+LEARN
+Active verb (not 'Library' or 'Content') — implies agency
+Tab 3
+TRACK
+Direct action verb — not 'Diary' or 'Log' (feels clinical)
+Tab 4
+ME
+Personal, direct — not 'Profile' or 'Settings' (too impersonal)
+
+Screen Titles
+Screen
+Title Text
+Notes
+Today screen
+Good morning, [first name].
+Use first name only. Rotate greetings.
+Learn screen
+What do you want to know?
+Question format encourages active use
+Track screen
+How are you today?
+Open, non-judgmental
+Profile / ME
+[First name]'s picture
+Never 'My profile' — first name feels warmer
+Cycle detail
+Your cycle
+Possessive — it belongs to them
+Settings
+How this app works
+Explains rather than just labeling
+Subscription
+Unlock everything
+Forward-looking, not fear-based
+Article detail
+[Article title]
+Just the title — no 'article' or 'post' prefix
+Symptom log
+Log it quick
+Casual, low pressure, time-aware
+History view
+Your patterns
+Pattern language — affirms value of tracking
+
+Health Topic Labels
+Topic Category
+Display Label
+Tone Note
+Hormonal cycle
+Your Cycle
+Personal, not clinical
+PMDD
+PMDD & Your Mood
+Combines clinical name with lived experience
+PCOS
+PCOS Explained
+Signals this will be clear, not confusing
+Perimenopause
+Perimenopause
+Use full word — do not abbreviate or soften
+Mental health
+Your Mind & ADHD
+Connects mental health to their specific context
+Thyroid
+Thyroid & Energy
+Links thyroid to the symptom they care about
+Nutrition
+Food & Your Brain
+Framed around ADHD brain impact, not diet culture
+Stress & HPA
+Stress & Your Body
+Accessible framing — 'HPA axis' goes in the detail
+Sleep
+Sleep & ADHD
+Direct connection to their life
+Autoimmune
+Inflammation & Immunity
+Clearer than 'autoimmune' for general users
+
+05  Content Card Copy
+Health cards are the core product. They must teach clearly, earn trust with evidence, and end with one action. Maximum 3 sentences in the preview. No exceptions.
+
+Card Copy Formula
+Content Card Formula (4 Elements)
+	•	HOOK (1 sentence): The most interesting or useful fact. Present tense. Active voice.
+	•	CONTEXT (1–2 sentences): Why this matters for this user. Connect to ADHD or women's health specifically.
+	•	ACTION (1 sentence): The single most useful thing they can do with this information.
+	•	EVIDENCE TAG: Evidence: High / Medium / Low  ·  Source: [Institution, Year]
+
+Card Copy Examples
+
+Example — Cycle Phase Card
+Element
+Copy
+Hook
+Your focus sharpens during the follicular phase — that's days 1–13.
+Context
+Rising estrogen supports dopamine production. For ADHD brains, this often means clearer thinking and easier task-starting.
+Action
+Try scheduling your hardest tasks in days 8–12 of your cycle.
+Evidence tag
+Evidence: High  ·  Source: Douma et al., Psychoneuroendocrinology, 2024
+
+Example — PMDD Card
+Element
+Copy
+Hook
+PMDD affects 3–8% of women — but it's much more common in those with ADHD.
+Context
+The exact rate is disputed, but research consistently shows ADHD and PMDD co-occur more than chance. Progesterone sensitivity and dopamine fluctuation are likely involved.
+Action
+Track your mood in the 7–10 days before your period to start seeing your personal pattern.
+Evidence tag
+Evidence: Medium  ·  Source: Doyle et al., Journal of Attention Disorders, 2023
+
+Evidence Level Definitions
+Level
+What It Means
+Copy Used
+High
+Multiple peer-reviewed RCTs or systematic reviews. Consensus in field.
+Evidence: High
+Medium
+Observational studies, small RCTs, or emerging research. Promising but not definitive.
+Evidence: Medium
+Low
+Case reports, anecdotal, expert opinion, or single small study
+Evidence: Low — Emerging Research
+Traditional
+Eastern medicine, functional medicine practice not yet in RCT evidence
+Traditional Practice (not RCT-tested)
+
+Copy Anti-Patterns for Content Cards
+✗  NEVER WRITE THIS
+Studies show that estrogen plays a key role in the regulation of dopaminergic neurotransmission, which may have implications for attention deficit hyperactivity disorder symptom expression across the menstrual cycle.
+✓  WRITE THIS INSTEAD
+Your estrogen peaks mid-cycle — and for ADHD brains, that often means a clearer, more focused few days.
+
+✗  NEVER WRITE THIS
+WARNING: Low progesterone in the luteal phase may cause severe mood symptoms in some patients. Consult your physician.
+✓  WRITE THIS INSTEAD
+The week before your period, progesterone drops. For many women with ADHD, that's when focus gets hardest. That's real — and it's hormonal, not a personal failing.
+
+06  Tracker Copy
+The tracker is used every day. Copy must be fast to read, zero friction, and feel good to use. Completion must feel rewarding without being over-the-top.
+
+Log Prompts — Daily Questions
+Metric
+Prompt Copy
+Input Type
+Scale Labels
+Energy
+How's your energy today?
+1–5 scale
+1=Empty · 3=Okay · 5=Full
+Focus
+How easy was it to focus?
+1–5 scale
+1=Scattered · 3=Okay · 5=Locked in
+Mood
+How's your mood feeling?
+3-choice tap
+Rough / Okay / Good
+Sleep
+How'd you sleep?
+1–5 scale
+1=Rough · 3=Fine · 5=Great
+Anxiety
+Anxiety levels today?
+1–5 scale
+1=Very low · 3=Moderate · 5=High
+Cycle day
+What day of your cycle are you on?
+Number input or skip
+Or: 'I don't track' option
+Symptoms
+Anything notable today?
+Multi-select chips
+Cramps / Brain fog / Fatigue / Irritability / Bloating / None
+Medication
+Did you take your ADHD meds today?
+Yes / No / Skip
+Skip = no shame option always visible
+
+Completion Messages
+Trigger
+Message
+Notes
+First log of the day
+"Logged. You showed up."
+Simple, honest, enough.
+3-day streak
+"Three in a row. Patterns are forming."
+Matter-of-fact — not over-celebrated
+7-day streak
+"A full week. You're building something real."
+Acknowledge without pressure to continue
+14-day streak
+"Two weeks of data. Your patterns are getting clearer."
+Ties streak to value: insight
+30-day streak
+"30 days. You know your body better than you did a month ago."
+Focuses on knowledge gained, not the streak itself
+Missed a day (return)
+"Good to have you back. Picking right up."
+Zero guilt. Zero numbers. Zero mention of absence.
+Missed several days (return)
+"You're here. That's all that matters. Let's see how you're doing today."
+Never mention days missed
+All questions answered
+"That's everything. All logged."
+Completion confirmation only — no extra fanfare
+Partial log
+"Got it. You can always add more later."
+Partial is fine — do not prompt for more
+Mood marked as 'Rough'
+"Thanks for being honest. That takes guts."
+Validate the hard days — do not try to fix
+
+Streak Language Rules
+✗  NEVER WRITE THIS
+🔥 You broke your streak! You had 14 days and now it's reset to 0.
+✓  WRITE THIS INSTEAD
+Good to have you back. Let's see how you're doing today.
+
+✗  NEVER WRITE THIS
+Don't break your streak! Log now to keep your 7-day streak alive! ⚠
+✓  WRITE THIS INSTEAD
+Seven days of data. Your patterns are getting clearer.
+
+07  Notifications & Reminders
+Push notifications are where most apps fail ADHD users. They use urgency, guilt, and FOMO. This app uses curiosity, warmth, and relevance. Every notification must pass the 'would a good friend send this?' test.
+
+Notification Copy Library
+Type
+Notification Title
+Notification Body
+Timing
+Daily check-in
+How are you today?
+Your log takes about 30 seconds. No pressure.
+User-set time
+Daily check-in (variation)
+Quick check-in?
+One tap for each: energy, mood, focus.
+User-set time
+Cycle insight
+Your cycle just shifted.
+You're entering the luteal phase. Here's what to expect.
+Detected phase change
+Phase insight
+Something worth knowing.
+Your estrogen peaks around now. Focus often feels easier.
+Mid-follicular phase
+PMDD alert (PMS window)
+The next 7–10 days.
+This window can be tough for ADHD brains. You're not broken — it's hormonal.
+7 days before period
+Weekly recap
+Your week in one look.
+7 days of data is ready. Want to see your patterns?
+Every Sunday
+New content
+New: [Topic]
+One new insight about [topic] — quick read, worth it.
+Content push day
+Re-engagement (3+ days away)
+Hey. No guilt, just checking in.
+Your health data is still here. Ready when you are.
+Day 3 of inactivity
+Re-engagement (7+ days)
+You've got mail. (Well, insights.)
+We've been collecting patterns in the background. Come see.
+Day 7 of inactivity
+Achievement
+Something worth celebrating.
+7 days of data. Your body is telling you a story now.
+On milestone
+Subscription
+The full picture is waiting.
+Unlock cycle pattern analysis and personalized insights.
+Smart timing — not after bad mood day
+
+Notification Rules
+Non-Negotiable Notification Rules
+	•	Maximum 1 push notification per day — never send 2+ in 24 hours
+	•	All notifications require opt-in — never send without permission
+	•	Never send urgency language ("Last chance", "Expires", "Don't miss")
+	•	Never mention streak counts in notifications — that's FOMO pressure
+	•	Never send notifications after 9PM or before 7AM — respect sleep
+	•	Always offer notification preferences in-app — easy to access
+	•	Test notification copy by asking: would a good friend send this text? If no, rewrite.
+
+08  Empty States
+Empty states are the most underwritten screens in most apps. Here, they must be warm and give a clear path forward — never a blank void that makes users feel they did something wrong.
+
+Empty State Copy Library
+Screen / Context
+Headline
+Body Copy
+CTA
+No logs yet (Tracker)
+No data yet — but that's easy to fix.
+Your first log takes about 30 seconds.
+Log how I'm feeling →
+First time in History
+Your story starts here.
+Track today and you'll start seeing patterns within a week.
+Log now →
+No content saved (Library)
+Nothing saved yet.
+Tap the bookmark on any card to save it here.
+Go to Learn →
+Search: no results
+Nothing found for that.
+Try a different word, or browse by topic.
+Browse topics →
+Cycle: not set up
+Your cycle info isn't set up yet.
+Add your last period date and we'll do the rest.
+Set up my cycle →
+Insights: not enough data
+Insights unlock after 7 days of logging.
+You've got [N] of 7 days. Keep going — patterns are forming.
+Log today →
+No notification permission
+Notifications are off.
+Turn them on for gentle reminders and cycle insights.
+Update in Settings →
+Subscription: locked content
+This is in the full plan.
+Unlock your full health picture — including this.
+See what's included →
+History: no recent data
+Nothing logged this week.
+Ready to pick back up? No catching up required.
+Log now →
+
+09  Error Messages
+Errors cause anxiety. Error messages in this app must be calm, clear, and immediately actionable. No blame. No alarm. No technical jargon.
+
+Error Message Library
+Error Type
+Title
+Body
+CTA
+No internet
+You're offline.
+Connect to the internet and we'll sync everything.
+Retry
+Sync failed
+Couldn't save that.
+Your entry is safe — we'll try again in a moment.
+Try now
+Login failed
+That didn't work.
+Double-check your email or password.
+Try again
+Account not found
+Hmm, we couldn't find that.
+Check the email address or create a new account.
+Try again  /  Sign up
+Password reset
+Check your inbox.
+We've sent a reset link to [email]. Sometimes it goes to spam.
+Resend →
+Server error (500)
+Something went wrong on our end.
+It's not you. We're looking into it.
+Retry  /  Contact us
+Session expired
+You've been logged out.
+For security, sessions expire. Log back in to continue.
+Log in →
+Upload failed
+That file didn't upload.
+Try a smaller file, or a JPG or PNG.
+Try again
+Feature unavailable
+This isn't available right now.
+We're working on it. Try again in a bit.
+OK
+Purchase failed
+Payment didn't go through.
+Check your payment info and try again.
+Update payment →
+
+Error Language Rules
+✗  NEVER WRITE THIS
+ERROR 403: Access denied. You do not have permission to view this resource.
+✓  WRITE THIS INSTEAD
+Hmm, something went sideways. Let's try that again.
+
+✗  NEVER WRITE THIS
+Your session has timed out due to inactivity. Please re-authenticate.
+✓  WRITE THIS INSTEAD
+You've been logged out. For security, sessions expire. Log back in to continue. →
+
+10  CTAs & Button Copy
+Button labels are the shortest, highest-stakes copy in the app. Every word must be active, specific, and tell users exactly what will happen when they tap.
+
+Primary CTA Library
+Context
+Button Label
+Notes
+Start a new action
+Get started →
+Arrow signals movement forward
+Proceed in onboarding
+Next →  or  Show me →
+Vary between screens for variety
+Log symptoms / mood
+Log it →
+Short, active, casual
+Save an entry
+Done  or  Saved ✓
+No arrow — terminal action
+View content detail
+Read more →  or  See more →
+Not 'Learn more' — too corporate
+See full history
+See my patterns →
+Connects to the value (patterns, not 'data')
+Open tracker
+Track now →
+Urgency without alarm
+Return to home
+Back to Today
+No arrow — returning action
+Dismiss a modal
+Got it  or  Close
+No 'OK' — too robotic
+Skip optional setup
+Skip for now  or  I'll do this later
+Always soft — never punitive
+Complete log
+All done ✓
+Celebratory micro-confirmation
+Confirm delete
+Yes, delete
+Always explicit for destructive actions
+Cancel delete
+Keep it
+Positive language even for cancel
+
+Button Copy Rules
+CTA Writing Rules
+	•	Always start with a verb: Log, See, Get, Start, Track, Read
+	•	Maximum 4 words per button label
+	•	Never use: Submit, Okay, Continue (too corporate or vague)
+	•	Never use: Update, Proceed, Confirm without context (too clinical)
+	•	Destructive buttons (delete, remove) must be explicit — never hidden as 'Continue'
+	•	Skip / dismiss options must be visually present — never hidden or grey
+	•	Primary button copy changes meaning per screen — never reuse generic labels
+
+11  Achievements & Milestones
+Achievements must feel genuine, not patronizing. ADHD users are hypersensitive to being talked down to. Celebrate the right things: knowledge gained, patterns found, consistency over perfection.
+
+Achievement Library
+Achievement
+Title
+Description
+Icon
+First log
+First Step
+You logged something. That's where all good patterns start.
+◇
+7-day streak
+One Week In
+Seven days of data. Your body is starting to talk.
+◆
+14-day streak
+Pattern Forming
+Two weeks. You're seeing connections now.
+✦
+30-day streak
+The Full Picture
+A month of data. You know yourself better than you did 30 days ago.
+★
+Cycle tracked (first)
+Cycle Aware
+You've started tracking your cycle. This is where insights come from.
+◎
+3 topics read
+Curious Mind
+You've explored 3 health topics. Keep following what matters to you.
+✺
+All tabs visited
+Explorer
+You've found everything in the app. It's all yours now.
+▲
+Log on a 'Rough' day
+Honest Tracker
+You logged on a hard day. That takes guts — and makes the data better.
+✓
+7 logs with 'focus' tracked
+Focus Finder
+Seven focus logs. You're starting to see your focus patterns.
+◉
+Shared an insight
+Spreading the Word
+You shared something worth knowing. Thank you.
+↗
+
+Achievement Copy Rule
+Never use exclamation points in achievement copy. 'You did it!!!' feels hollow and performative. A calm, genuine acknowledgment lands more strongly with ADHD users who have been over-praised and then abandoned by other apps.
+
+12  Paywall & Subscription Copy
+The subscription offer must be honest, clear, and low-pressure. ADHD users are especially sensitive to FOMO manipulation and dark patterns — one instance of that destroys trust permanently.
+
+Upgrade Prompts
+Feature gate headline
+"This is in the full plan."
+
+Feature gate body
+"Pattern analysis, personalized cycle insights, and your full history are part of the complete app. Unlock everything when you're ready."
+
+Upgrade CTA
+"See what's included →"
+Note: Not 'Upgrade Now' — removes pressure
+
+Dismiss option
+"Not now"
+Note: Always present, always easy to find
+
+Subscription Screen Copy
+Page headline
+"The full picture."
+
+Sub-headline
+"Unlock everything: cycle analysis, pattern insights, all content, unlimited history."
+
+Pricing line
+"$9.99/month · or $79.99/year (save 33%)"
+
+Annual CTA
+"Start full access — $79.99/year"
+Note: Specific price in button for honesty
+
+Monthly CTA
+"Monthly instead — $9.99/month"
+Note: Alternative clearly visible
+
+Free trial (if offered)
+"Try everything free for 7 days. Cancel anytime — no questions."
+Note: Plain language promise, not legal-speak
+
+Below pricing
+"Cancel anytime. No fees. No guilt."
+Note: Three things ADHD users fear — address them directly
+
+Things to Never Do in Subscription Copy
+✗  NEVER WRITE THIS
+LAST CHANCE! Your free trial expires in 2 days. Don't lose access to your streaks!
+✓  WRITE THIS INSTEAD
+Your free trial ends on [date]. Ready to unlock everything? No pressure — your data stays either way.
+
+✗  NEVER WRITE THIS
+Join 50,000 users already transforming their health! Premium features are changing lives!
+✓  WRITE THIS INSTEAD
+Pattern analysis, personalized insights, and unlimited history — available in the full plan.
+
+
+UX Copy Guide v1.0 · ADHD Women's Health App
+Every word in this app was written to earn trust. Review all copy against these standards before shipping.

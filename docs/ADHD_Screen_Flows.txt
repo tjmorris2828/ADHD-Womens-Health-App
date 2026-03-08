@@ -1,0 +1,591 @@
+ADHD Women's Health App
+
+Screen Flows & Information Architecture
+
+Complete navigation system, screen-by-screen specs,
+user journey maps, and IA for iOS MVP
+
+Version 1.0  ·  iOS MVP  ·  March 2026
+
+
+01  App Structure Overview  ·  Navigation Model & Tab Architecture
+
+Navigation Model
+The app uses a 5-tab UITabBar at the bottom of the screen — the primary navigation layer. All core sections are one tap away. Secondary navigation uses modal sheets and push navigation within each tab. No hamburger menus, no hidden drawers.
+
+ADHD Principle: Tabs are always visible. Users never lose their place. Back buttons always work. No dead ends.
+
+5-Tab Structure
+Tab 1  🏠
+Home — Daily dashboard, quick log, today's insight card
+Tab 2  📚
+Learn — Health topics library, search, saved articles
+Tab 3  📊
+Track — Symptom tracker, cycle log, mood & energy journal
+Tab 4  🔍
+Patterns — AI insights, correlation graphs, trend summaries
+Tab 5  👤
+Profile — Settings, health profile, subscription, goals
+
+Screen Hierarchy
+The overall structure follows 3 navigation levels maximum. No screen is more than 3 taps from any other screen.
+Level 1
+Tab root screens (5 total) — always accessible via tab bar
+Level 2
+Section screens — pushed from tab root (e.g., topic detail, tracker form)
+Level 3
+Detail screens — modal sheets or push (e.g., article, log entry review)
+
+Max 3 levels deep. If content requires more, it signals a structural issue — restructure before building.
+
+02  Onboarding Flow  ·  First-Run Experience · 5 Screens
+
+Onboarding Design Principles
+• Keep it under 3 minutes — ADHD brains disengage from long setups
+• One question per screen — no forms, no overwhelming intake
+• Show value immediately — don't save it all for after onboarding
+• Skip always available — no forced completion
+• Progress bar visible throughout — combats time blindness
+
+Full Onboarding Journey
+1
+Welcome Screen
+Full-screen purple splash. App name, tagline, single CTA: 'Get Started'. No sign-up yet.
+2
+What brings you here?
+3 large tile options: 'Understand my cycle', 'Manage ADHD + hormones', 'Track my health'. Multi-select allowed.
+3
+Quick health snapshot
+5 toggles — ADHD diagnosis, PMDD, PCOS, Perimenopause, Other. Subtext: 'Just for personalization, change anytime.'
+4
+Notification setup
+Simple permission request. Benefit framing: 'Get a gentle daily check-in.' Skip option visible.
+5
+Your dashboard is ready
+Preview of home screen with name personalization. CTA: 'Let's Go ↗'. No password required yet.
+
+Screen 1: Welcome
+Welcome Screen
+Full-screen brand introduction. Single-purpose: get the user to tap 'Get Started'.
+
+▸ Full-screen purple gradient background
+▸ App logo / wordmark centered at 40% from top
+▸ Tagline: 'Your health, designed for your brain'
+▸ Large CTA button: 'Get Started' (full-width, teal, 56pt height)
+▸ Small text below: 'Already have an account? Sign in'
+▸ No navigation bar, no back button, no tabs
+
+Screen 2: Goals Selection
+What brings you here?
+Intent capture. Personalizes content recommendations. Light and non-clinical framing.
+
+▸ Progress bar at top: Step 1 of 4
+▸ Headline: 'What brings you here?' (32pt, no subtext)
+▸ 3 large tap tiles (full-width, 88pt height each)
+▸ Tile 1: 🌙 Understand my cycle
+▸ Tile 2: ⚡ Manage ADHD + hormones
+▸ Tile 3: 📈 Track my health patterns
+▸ Multi-select allowed — tiles toggle selected state (filled purple)
+▸ Bottom CTA: 'Continue' (active only when ≥1 selected)
+
+Screen 3: Health Snapshot
+Quick Health Snapshot
+5 binary toggles. No forms. No long text. Purpose: content personalization only.
+
+▸ Progress bar: Step 2 of 4
+▸ Headline: 'Tell us about yourself' (32pt)
+▸ Subtext: 'Just to personalize your experience — change anytime'
+▸ 5 toggle rows: ADHD / PMDD / PCOS / Perimenopause / None of the above
+▸ Each row: icon + label + iOS toggle (no text input)
+▸ Bottom CTA: 'Continue' (always active — skip allowed)
+
+Screen 4: Notifications
+Notification Permission
+System permission prompt primed with value framing. Shown after user is engaged.
+
+▸ Progress bar: Step 3 of 4
+▸ Illustration area: gentle alarm clock or moon icon (SVG, purple)
+▸ Headline: 'Stay connected to your patterns'
+▸ 3 bullet benefits: Daily check-in reminder / Cycle phase updates / Weekly insight digest
+▸ Primary CTA: 'Enable Notifications' → triggers iOS system prompt
+▸ Skip link below: 'Maybe later' (small, slate colored)
+
+Screen 5: Dashboard Preview
+You're All Set
+Celebratory end screen. Shows immediate value. Gets user into the app ASAP.
+
+▸ Progress bar: Step 4 of 4 (complete, teal checkmark)
+▸ Illustration: sparkle or confetti SVG (non-childish, elegant)
+▸ Headline: 'Your dashboard is ready'
+▸ Preview card of Today's Home screen (static mockup embedded)
+▸ Large CTA: 'Let's Go →' (full-width, purple, 56pt)
+▸ No sign-up required at this point — account creation deferred to first save action
+
+03  Home Tab  ·  Daily Dashboard · Tab 1
+
+The Home tab is the daily anchor point. It shows what matters today in a scannable, dopamine-friendly card stack. No infinite scroll. Maximum 5 cards visible before fold. Users can always see the tab bar.
+
+This is the most-opened screen. Every element must load in <300ms. Cards must be skimmable in 5 seconds.
+
+Home Screen Layout
+Home (Today Dashboard)
+Personalized daily summary. Card-based feed. Quick-log entry point.
+
+▸ Navigation bar: 'Good morning, [Name]' + notification bell icon
+▸ Card 1: Today's Phase — Cycle day + hormone phase label + 2-line description
+▸ Card 2: Quick Log — 'How are you feeling?' with 5 emoji selectors (30-second log)
+▸ Card 3: Today's Insight — Research snippet + source label (Evidence: High/Medium/Low)
+▸ Card 4: Your Streak — Days tracked, gentle message (no shame if streak is broken)
+▸ Card 5: Recommended Article — From Learn tab, based on current cycle phase
+▸ Floating action button (+) in bottom-right for manual log entry
+
+Quick Log Sheet (Modal)
+Quick Log Bottom Sheet
+Triggered by Card 2 tap or (+) FAB. Half-screen modal. 30-second interaction target.
+
+▸ Sheet handle at top (standard iOS bottom sheet)
+▸ Title: 'Today's Check-in' + date
+▸ Row 1: Energy level — 5-tap scale (1–5, emoji icons, no numbers)
+▸ Row 2: Mood — 5 emoji quick-tap (😰 😕 😐 😊 😄)
+▸ Row 3: Focus — single slider 1–10
+▸ Row 4: Any symptoms? — 6 chip tags (Cramps / Brain fog / Fatigue / Irritability / Bloating / Other)
+▸ Optional note: 1-line text field (keyboard opens only if tapped)
+▸ Submit CTA: 'Save Check-in' — full-width teal button
+
+Home → Detail Flows
+1
+Tap Today's Phase card
+Opens Phase Detail sheet — full hormone/symptom breakdown for current cycle phase
+2
+Tap Quick Log card
+Opens Quick Log bottom sheet (half-screen modal)
+3
+Tap Insight card
+Opens full article in Learn tab (preserves Home scroll position)
+4
+Tap Streak card
+Opens Patterns tab filtered to streak history
+5
+Tap Recommended article
+Opens article detail in modal (pushes from Home, back returns to Home)
+6
+Tap (+) FAB
+Opens Quick Log bottom sheet
+7
+Tap notification bell
+Opens notification center (full-screen modal, X to dismiss)
+
+04  Learn Tab  ·  Health Content Library · Tab 2
+
+The Learn tab is the content knowledge base. Articles are organized by health topic, not by recency. Topics use visual cards. All content shows evidence level. Reading time shown on every article.
+
+No infinite scroll. Limit each topic section to 6 visible cards before 'See all'. Prevents overwhelm.
+
+Learn Screen Layout
+Learn (Library Root)
+Topic-first browsing. Personalized section at top based on onboarding answers.
+
+▸ Navigation bar: 'Learn' title + search icon (top right)
+▸ Section 1: 'Based on your profile' — 3 horizontal-scroll cards
+▸ Section 2: Health Topics grid — 7 topic cards (2-column grid, icon + label)
+▸   Topics: Hormones & Cycle / ADHD / PMDD / PCOS / Perimenopause / Thyroid / Nutrition
+▸ Section 3: 'Quick reads' — 3-card horizontal scroll, articles <5 min
+▸ Section 4: 'Research highlights' — 2-card list, evidence-labeled research summaries
+▸ Bottom: 'Saved articles' link → navigates to Saved screen
+
+Topic Detail Screen
+Topic Detail (e.g., Hormones & Cycle)
+All content for one health topic. Organized into subtopic groups.
+
+▸ Back button: returns to Learn root
+▸ Topic header: large icon + topic name + 1-line description
+▸ Evidence badge: 'High evidence base' / 'Emerging research' / 'Traditional practice'
+▸ Subtopic chips: horizontal scroll — e.g., 'Follicular', 'Luteal', 'Menopause', 'ADHD link'
+▸ Article list: vertical cards showing title / reading time / evidence level
+▸ Each article card: 120pt height, title (2 lines max), reading time, bookmark icon
+
+Article Detail Screen
+Article Detail
+Full content view. ADHD-optimized: headers, short paragraphs, key takeaway box.
+
+▸ Navigation: back arrow + share icon (top right) + bookmark icon
+▸ Reading progress bar: thin teal line at very top, fills as user scrolls
+▸ Article header: topic badge + title (max 60 chars) + reading time + evidence level
+▸ Key Takeaway box: purple callout at top — 2–3 sentence summary (ADHD skip-to feature)
+▸ Body: H2 headers every 150 words max, short paragraphs, no walls of text
+▸ Source citations: expandable footnotes at bottom, not inline
+▸ Related articles: 2-card horizontal scroll at bottom
+▸ Bottom CTA: 'Save to Your Library' (if not already saved)
+
+Search Screen
+Search
+Triggered by search icon in Learn nav bar. Full-screen takeover.
+
+▸ Search bar auto-focused (keyboard opens immediately)
+▸ Recent searches: shown when field is empty
+▸ Trending topics: 6 chip tags below recent (e.g., 'PMDD', 'Brain fog', 'Luteal phase')
+▸ Results: article cards same style as topic list
+▸ Empty state: 'No results for X — try a related term' + 3 suggested chips
+▸ Cancel button: always visible, dismisses search and returns to Learn root
+
+05  Track Tab  ·  Symptom & Cycle Tracker · Tab 3
+
+The Track tab is the daily data entry hub. It combines cycle tracking, symptom logging, mood journaling, and custom health metrics. Entry is always fast — 60 seconds max for a full check-in. All historical data is reviewable here.
+
+ADHD friction rule: If logging takes more than 3 taps for basic entry, users will stop. Design for 2-tap minimum.
+
+Track Screen Layout (Root)
+Track (Root)
+Overview of current tracking status. Entry point for all log types.
+
+▸ Navigation bar: 'Track' + calendar icon (top right)
+▸ Today card: current date + cycle day + phase label (teal pill badge)
+▸ Log buttons: 4 large tap-to-log pills (Mood / Symptoms / Cycle / Energy)
+▸ Weekly mini-calendar: 7-day strip, dots showing logged days (purple = full, teal = partial)
+▸ Recent logs: last 3 entries as compact cards, tap to expand
+▸ Metrics section: 3 summary tiles (Avg energy this week / Symptom frequency / Current streak)
+
+Cycle Log Screen
+Cycle Log
+Period start/end tracking + flow intensity. Simple 2-step entry.
+
+▸ Back button: returns to Track root
+▸ Month calendar view: color-coded days (period / predicted / ovulation window / luteal)
+▸ Log period button: 'Start period today' or 'End period today' (context-aware)
+▸ Flow intensity: 3 quick-tap options (Light / Medium / Heavy) — no sliders
+▸ Symptoms for today: 6-chip multi-select (same as Quick Log sheet)
+▸ Notes: optional 1-line text field
+▸ Save CTA: 'Save Today's Log' — teal full-width button
+
+Mood & Symptom Log
+Mood & Symptom Log
+Expanded version of Quick Log. Triggered from Track tab log pills.
+
+▸ Sheet title: 'Log for [Date]'
+▸ Section 1 — Mood: 5-emoji row + optional 1-line note
+▸ Section 2 — Energy: 5-star tap scale
+▸ Section 3 — Focus: 1–5 tap scale (not slider)
+▸ Section 4 — Physical symptoms: chip grid (12 options, scrollable row)
+▸ Section 5 — ADHD symptoms: chip grid (8 options: Brain fog / Rejection sensitivity / Time blindness / Hyperfocus / etc.)
+▸ Section 6 — Notes: multi-line text field (optional, keyboard only opens on tap)
+▸ Save CTA: 'Save Log' (full-width, teal)
+
+Log History / Calendar View
+Full Calendar View
+Accessed via calendar icon in Track nav bar. Monthly calendar with log density.
+
+▸ Month calendar: full calendar grid, days colored by log completeness
+▸ Tap any day: opens day detail in bottom sheet
+▸ Day detail sheet: shows all logs for that day as expandable cards
+▸ Swipe left/right to navigate months
+▸ Back to today button: always visible
+▸ Export button (premium): 'Export to PDF / CSV' — paywalled for free tier
+
+06  Patterns Tab  ·  AI Insights & Trend Analysis · Tab 4
+
+The Patterns tab surfaces insights from logged data. It connects dots the user may not have seen: cycle phase + mood correlation, symptom clusters, energy trends. Available after 7+ days of tracking for basic insights, 30+ days for deep patterns.
+
+Insights must be grounded in the user's actual data — never fabricated or generic. Each insight shows which data points it's based on.
+
+Patterns Screen Layout (Root)
+Patterns (Root)
+Visual overview of detected correlations and trends. Scannable card layout.
+
+▸ Navigation bar: 'Your Patterns' + share icon (export, premium)
+▸ Insight card 1 (pinned): Most significant pattern this cycle — e.g., 'Energy dips on cycle day 21–24'
+▸ Section: 'This cycle' — 3 trend cards (Mood trend / Energy trend / Symptom frequency)
+▸ Section: 'Correlations found' — relationship insights (e.g., 'Low sleep correlates with high irritability')
+▸ Section: 'Compare cycles' — graph showing last 3 cycles overlaid (premium feature, blurred for free)
+▸ Unlock banner (free tier): 'Unlock deep patterns — see 6-month trends' → paywall
+
+Insight Detail Screen
+Insight Detail
+Tap any insight card to see full explanation, data source, and recommendations.
+
+▸ Back button: returns to Patterns root
+▸ Insight headline: large, plain-language summary (e.g., 'Your energy peaks mid-cycle')
+▸ Data basis: 'Based on 23 days of logs' — transparency about data source
+▸ Chart: simple SwiftUI chart (bar or line) showing the specific metric
+▸ Explanation: 2–3 sentence plain-language interpretation (no medical jargon)
+▸ Research connection: 'Why this happens' — brief science note with evidence level badge
+▸ Recommended actions: 2–3 ADHD-friendly action steps based on pattern
+▸ Related articles: 1–2 cards from Learn tab on this topic
+
+Patterns → Actions
+1
+Tap insight card
+Opens Insight Detail screen (push navigation)
+2
+Tap 'Why this happens' link
+Opens Research note as bottom sheet with source citations
+3
+Tap recommended action
+Opens action detail or related Learn article
+4
+Tap Share icon (premium)
+Opens iOS share sheet with exported insight summary
+5
+Tap 'Compare cycles' (blurred)
+Triggers paywall / upgrade prompt
+6
+No data state (<7 days)
+Shows 'Keep tracking — insights unlock after 7 days' + progress bar
+
+07  Profile Tab  ·  Settings, Health Profile & Subscription · Tab 5
+
+Profile (Root)
+User account, health preferences, notification settings, and subscription management.
+
+▸ Profile header: avatar (initials fallback) + display name + member since date
+▸ Health Profile section: Conditions (edit) / Goals (edit) / Cycle average length
+▸ Preferences section: Notification settings / Content preferences / Dark mode toggle
+▸ Account section: Email / Password / Connected apps (Apple Health) / Privacy settings
+▸ Subscription section: Current plan badge / Upgrade CTA (free tier) / Manage subscription (paid)
+▸ Support section: Help center / Give feedback / About
+▸ Sign out: bottom of list, text link style (no destructive red — reduce anxiety)
+
+Health Profile Edit Screen
+Edit Health Profile
+Update conditions, goals, and cycle data. Accessed from Profile root.
+
+▸ Navigation: 'Edit Profile' title + Save button (top right, disabled until change made)
+▸ Section 1: Health conditions — same toggles as onboarding (always editable)
+▸ Section 2: Cycle info — avg length, avg period length, last period date
+▸ Section 3: Goals — multi-select chips (same as onboarding screen 2)
+▸ Section 4: Preferred medicine approach — Western / Functional / Eastern / All
+▸ Auto-save with confirmation toast: 'Profile updated ✓'
+
+Notification Settings Screen
+Notification Preferences
+Granular control over all notification types. Toggle-based, no complex menus.
+
+▸ Daily check-in reminder: toggle + time picker
+▸ Cycle phase change alerts: toggle
+▸ Weekly insight digest: toggle + day-of-week picker
+▸ Streak reminders: toggle (disabled by default for ADHD shame reduction)
+▸ Health tips: toggle
+▸ All notifications master toggle: top of screen
+
+08  Authentication Flow  ·  Deferred Sign-Up Strategy
+
+Deferred Sign-Up Strategy
+Authentication is deliberately deferred until the first action that requires data persistence (e.g., saving an article, completing a second log). This reduces onboarding friction by ~60% and follows the ADHD-friendly principle of 'show value first, ask later.'
+
+Users can explore the full app for up to 3 days without creating an account. Data is stored locally until sign-up. No account = no data loss warning shown after 72 hours.
+
+Sign-Up Trigger Screens
+First article save
+Bottom sheet: 'Create an account to save your library' → Sign up / Continue without saving
+Second day of tracking
+Toast notification: 'Sign up to sync your health data across devices' → Sign up / Dismiss
+72-hour local data warning
+Banner: 'Your data is stored locally — sign up to keep it safe' → Sign up
+Paywall trigger
+Full paywall screen always requires account before purchase
+Share insight
+Share sheet triggers 'Create account to export' prompt
+
+Sign-Up Screen
+Create Account
+Minimal sign-up. Email + password only. Apple Sign In as primary option.
+
+▸ Header: app logo + 'Join [App Name]'
+▸ Primary CTA: 'Continue with Apple' (Apple Sign In, prominent) — reduces friction 70%+
+▸ Secondary: Email field + Password field
+▸ Sign-up button: 'Create Account'
+▸ Terms note: small text below — 'By signing up you agree to our Terms and Privacy Policy'
+▸ Link: 'Already have an account? Sign in'
+▸ No name required on sign-up — collected later in profile
+
+Sign-In Screen
+Sign In
+Returning user log-in. Email/password + Apple Sign In.
+
+▸ 'Continue with Apple' — primary, full-width button
+▸ Email field
+▸ Password field + show/hide toggle
+▸ 'Forgot password?' link — opens reset flow
+▸ 'Sign In' button (active when both fields filled)
+▸ 'Don't have an account? Get started' link
+
+09  Paywall & Subscription Flow  ·  Free vs Premium · Upgrade Experience
+
+Free vs Premium Feature Map
+Health content library
+Free (full access)
+Daily check-in logging
+Free (full access)
+Cycle tracking (basic)
+Free
+7-day patterns & insights
+Free
+30-day deep pattern analysis
+Premium
+Cycle comparison (3+ cycles)
+Premium
+Data export (PDF / CSV)
+Premium
+Custom symptom tags
+Premium
+Research library (full depth)
+Premium
+AI health correlation reports
+Premium
+
+Paywall Screen
+Upgrade Screen
+Shown when user taps a premium feature. Non-aggressive, value-first framing.
+
+▸ Header: feature preview (blurred/locked version of what they're trying to access)
+▸ Headline: 'Unlock [specific feature name]' — not generic 'Go Premium'
+▸ 3 feature benefit bullets specific to the locked feature
+▸ Pricing options: Annual ($79.99/year = $6.67/mo) as default selected / Monthly ($9.99/mo) below
+▸ Trial callout: '7-day free trial — cancel anytime' (if applicable)
+▸ CTA: 'Start Free Trial' or 'Unlock Now' — full-width, purple
+▸ Dismiss: 'Maybe later' link below CTA (always accessible)
+▸ Subscription terms: small text at very bottom
+
+Post-Purchase Confirmation
+Welcome to Premium
+Celebratory screen shown immediately after successful purchase.
+
+▸ Animated checkmark or sparkle (SF Symbols animation)
+▸ Headline: 'You're in ✨'
+▸ 3 premium features now unlocked — listed as teal checkmarks
+▸ CTA: 'Explore your new features' — goes to Patterns tab (where most premium features live)
+
+10  Edge Cases & Empty States  ·  Handling Zero Data, Errors & Limits
+
+Critical Empty States
+New user / Day 1 Home
+Welcome card replaces insight cards. 'Start your first check-in →' CTA prominent.
+Track tab < 3 days
+Mini-calendar shows only today. 'Keep logging — patterns appear at 7 days' progress bar.
+Patterns tab < 7 days
+Locked-looking card with progress bar: 'X more days to first insight'. Non-punishing framing.
+Learn tab no connection
+Cached articles shown first. 'Offline — showing saved content' banner. No error page.
+Search no results
+'No results for X — try: [3 related chips]'. Never a blank page.
+Log history empty day
+Tap empty day: 'Nothing logged that day — log today instead →' CTA.
+
+Error States
+Network error
+Toast at bottom: 'Check your connection — we'll sync when you're back'. Never a full-screen error.
+Sync failure
+Subtle banner: 'Couldn't sync — your data is saved locally'. Auto-retries on reconnect.
+Invalid form entry
+Inline validation below field — red text, never alert popups.
+Session expired
+Redirects to Sign In with pre-filled email. Message: 'Your session expired — sign back in.'
+Feature unavailable
+Toast: 'This feature is temporarily unavailable'. No generic error codes shown.
+
+Interruption Recovery
+• App backgrounded mid-log: draft saved locally, restored when user returns
+• Mid-onboarding close: progress saved, resumes from last completed step
+• Payment interrupted: no double-charges, confirmation email always sent
+• Article mid-read: reading position saved, returns to same paragraph on reopen
+
+ADHD principle: Users will leave mid-task constantly. The app must gracefully handle interruption as the default state, not the exception.
+
+11  Information Architecture Sitemap  ·  Full Screen Inventory
+
+Complete Screen Inventory
+ONBOARDING (5 screens)
+Welcome / Goals / Health Snapshot / Notifications / Ready
+AUTH (4 screens)
+Sign Up / Sign In / Forgot Password / Password Reset
+HOME TAB (3 screens)
+Home Root / Phase Detail Sheet / Quick Log Sheet
+LEARN TAB (5 screens)
+Learn Root / Topic Detail / Article Detail / Search / Saved Articles
+TRACK TAB (5 screens)
+Track Root / Cycle Log / Mood & Symptom Log / Calendar View / Day Detail Sheet
+PATTERNS TAB (3 screens)
+Patterns Root / Insight Detail / Cycle Comparison (premium)
+PROFILE TAB (4 screens)
+Profile Root / Edit Health Profile / Notification Settings / Account Settings
+PAYWALL (2 screens)
+Upgrade Screen / Post-Purchase Confirmation
+SYSTEM (3 screens)
+Loading / Offline / App Update Prompt
+
+Total Screen Count
+Total unique screens (MVP): 34 screens
+
+Sheets/modals (not counted as full screens): ~12
+
+Navigation layers: 3 max
+
+Tabs: 5
+
+Onboarding length: 5 steps, target < 3 minutes
+
+Navigation Method by Flow
+Tab switching
+UITabBar — always visible, instant (no animation on tab switch)
+Push navigation
+Within each tab — standard iOS right-to-left push, back swipe enabled
+Modal sheets
+Half and full-screen iOS sheets — swipe down to dismiss, never requires back button
+Bottom sheets
+UISheetPresentationController — used for quick logs and day detail
+Full-screen modals
+Search, article detail when opened from Home, auth screens
+Alerts
+Minimal use — only for destructive confirmation (delete log). No info alerts.
+
+12  MVP Priority Map  ·  Build Order & Scope
+
+MVP Phase 1 — Core Screens (Ship First)
+Target: 6–8 weeks to TestFlight beta with these screens complete.
+
+1
+Onboarding (5 screens)
+No account required. Goals + health snapshot. Notification permission.
+2
+Home Tab — Root
+Today card, Quick Log sheet, one insight card (hardcoded content initially)
+3
+Learn Tab — Root + Article
+6 articles minimum, 2 topics. No search needed for MVP.
+4
+Track Tab — Root + Mood Log
+Daily mood/energy log. Week mini-calendar. No cycle tracking in MVP.
+5
+Profile Tab — Root only
+Health profile view. Notification toggle. No subscription screen in MVP.
+6
+Auth — Sign Up + Sign In
+Apple Sign In + email/password. Deferred sign-up strategy active.
+
+MVP Phase 2 — Add After Beta Feedback
+1
+Cycle tracking screens
+Cycle log, phase detection, calendar view
+2
+Patterns tab
+7-day insights. SwiftUI charts. Needs 7+ days of user data.
+3
+Search (Learn tab)
+Full-text search across article library
+4
+Paywall + subscription
+RevenueCat integration, annual/monthly plans, 7-day trial
+5
+Notification system
+Push notification scheduling for daily check-ins
+
+MVP Non-Goals (Version 2+)
+• AI health correlation engine (needs data at scale)
+• Export to PDF / CSV
+• Apple Health integration
+• Wearable device sync
+• Community / social features
+• Telehealth connection / provider sharing
+
+Principle: Ship the daily logging loop and one full content topic before building anything else. Validate that users will log daily before building analytics on top of it.
+
+ADHD Women's Health App — Screen Flows v1.0  ·  Confidential

@@ -1,0 +1,748 @@
+
+◆
+
+ADHD Women's Health App
+Design System & Component Library
+Version 1.0  ·  iOS First  ·  ADHD-Optimized
+Built for executive-function aware design
+
+
+WHAT'S IN THIS DOCUMENT
+
+01  Color System
+Full palette with tokens & usage rules
+05  Motion & Animation
+Timing, easing, reduced motion
+02  Typography Scale
+All type styles, sizes, line heights
+06  iOS Components
+Native component specs & overrides
+03  Spacing System
+4pt grid, named tokens
+07  Accessibility
+Color contrast, touch targets, a11y
+04  Component Library
+Cards, buttons, inputs, trackers
+08  Dark Mode
+Full dark palette & rules
+
+01  Color System
+Every color in this system was chosen specifically for ADHD brains. No harsh reds for non-errors. No neon for attention. No shame-colors. Soft, purposeful, and calming.
+
+Why ADHD Brains Need a Different Color System
+Bright, high-contrast UI is visually stimulating and causes rapid fatigue in ADHD users. Our palette uses desaturated tones with clear semantic meaning — so color communicates purpose, not noise.
+
+Primary Palette
+Swatch
+Token / Hex
+Usage
+On This Color
+ 
+Brand Purple
+#5C3FA0
+Primary brand color. App icon, headers, primary CTAs, focused states
+White text
+ 
+Soft Purple
+#7C5BBF
+Hover states, secondary emphasis, tab icons (active)
+White text
+ 
+Lavender
+#EDE8F7
+Card backgrounds, section fills, soft highlights
+Charcoal text
+ 
+Dark Purple
+#3D2A70
+Pressed states, high-emphasis text on light bg
+White text
+
+Secondary Palette
+Swatch
+Token / Hex
+Usage
+On This Color
+ 
+Teal
+#2A9D8F
+Positive actions, confirmations, streak indicators, progress
+White text
+ 
+Mint
+#E8F5F3
+Success backgrounds, positive insight cards
+Charcoal text
+ 
+Coral
+#E07060
+Soft warnings ONLY (never for errors or shame). Attention callouts.
+White text
+ 
+Peach
+#FDECEA
+Warning card backgrounds
+Charcoal text
+ 
+Amber
+#D97706
+Learning badges, insights, 'did you know' callouts
+White text
+ 
+Amber Light
+#FEF3C7
+Insight card backgrounds, tip highlights
+Charcoal text
+
+Neutral Palette
+Swatch
+Token / Hex
+Usage
+On This Color
+ 
+Cream
+#FFFEF9
+App background, page base — warmer than pure white, less harsh
+Charcoal text
+ 
+Mist
+#F3F4F6
+Disabled states, ghost buttons, empty areas
+Slate text
+ 
+Light Grey
+#E5E7EB
+Borders, dividers, cell lines
+—
+ 
+Slate
+#6B7280
+Secondary text, captions, helper text, timestamps
+—
+ 
+Charcoal
+#2D2D2D
+Primary text — softer than pure black, reduces eye strain
+—
+
+Semantic Color Rules
+Semantic Meaning
+Use This Color
+Never Use
+Primary action / CTA
+Brand Purple (#5C3FA0)
+Teal or Amber for primary buttons
+Success / Completion
+Teal (#2A9D8F)
+Green (too common, not distinctive)
+Warning / Attention
+Coral (#E07060)
+Red (#FF0000) — too alarming
+Error messages
+Coral (#E07060) + text explanation
+Bright red, skull icons, loud visuals
+Informational / Tips
+Amber (#D97706)
+Orange (too strong, visually loud)
+Missed / Incomplete
+Mist (#F3F4F6) + Slate text
+Red, shaming language, dark colors
+Progress / Streaks
+Teal gradient
+Red for low progress (no shame)
+Medical info labels
+Dark Purple on Lavender
+Black on white (too clinical)
+
+⚠  ADHD Color Anti-Patterns — Never Use These
+	•	No red error states — use soft coral + clear text explanation
+	•	No neon or overly saturated tones — causes visual fatigue
+	•	No pure black (#000000) — use charcoal (#2D2D2D) instead
+	•	No pure white (#FFFFFF) for backgrounds — use cream (#FFFEF9)
+	•	No 'streak broken' red indicators — users abandon apps that shame them
+	•	No grey text on white at small sizes — fails contrast (WCAG AA)
+
+02  Typography Scale
+Every type style is set for reading clarity on mobile. Line heights are generous. Font sizes stay comfortably large. No dense paragraphs anywhere in the app.
+
+Primary Font: SF Pro Display (iOS) / Inter (Android fallback)
+SF Pro Display is Apple's native system font — it is optimized for retina screens, ships built-in on every iPhone, and requires no additional loading. It is the correct choice for iOS ADHD UX: familiar, clean, and highly readable at all sizes.
+
+Type Styles
+Style Name
+Size
+Weight
+Line Height
+Tracking
+Use Case
+Display
+28pt
+Bold (700)
+34pt  (1.21x)
+−0.3pt
+Screen hero text, onboarding headers
+Title Large
+22pt
+Semibold (600)
+28pt  (1.27x)
+−0.2pt
+Section titles, card titles (primary)
+Title Medium
+18pt
+Semibold (600)
+24pt  (1.33x)
+−0.1pt
+Card headers, list headers
+Headline
+17pt
+Semibold (600)
+22pt  (1.29x)
+−0.1pt
+Prominent labels, feature names
+Body
+16pt
+Regular (400)
+24pt  (1.5x)
+0pt
+Main reading content — generous line height
+Body Bold
+16pt
+Semibold (600)
+24pt  (1.5x)
+0pt
+Emphasis within body text
+Callout
+15pt
+Regular (400)
+20pt  (1.33x)
+0pt
+Supporting text, descriptions
+Caption
+13pt
+Regular (400)
+18pt  (1.38x)
++0.1pt
+Timestamps, tags, helper labels
+Micro
+11pt
+Medium (500)
+14pt  (1.27x)
++0.3pt
+Badge text, status chips only
+
+Typography Rules for ADHD
+	•	Maximum 3 type sizes per screen — prevents cognitive overload
+	•	Body text minimum 16pt — never smaller for reading content
+	•	Line height minimum 1.4x for body text — improves tracking
+	•	Left-align all body text — center-aligned body is harder to scan
+	•	Limit bold usage — use bold only for the most critical word, not the whole line
+	•	No ALL CAPS for body content — use title case instead
+	•	Maximum line length: 65 characters — prevents reading fatigue
+	•	Paragraph max: 3 sentences — ADHD users stop reading after 3 sentences
+
+Content Hierarchy Example
+Level
+What It Is
+Type Style
+Example
+1 — Hook
+One-line insight or prompt
+Title Large (22pt Bold)
+Your estrogen is rising this week
+2 — Context
+1–2 sentence explanation
+Body (16pt Regular)
+This phase often brings clarity and energy
+3 — Action
+What to do now
+Callout Bold (15pt Semibold)
+Good time to schedule hard tasks
+4 — Source
+Evidence label
+Caption (13pt)
+Evidence: High  ·  Source: NIH, 2023
+
+03  Spacing System
+All spacing uses a strict 4pt grid. This creates visual rhythm and predictability — critical for ADHD brains that are sensitive to visual inconsistency.
+
+Spacing Tokens
+Token Name
+Value (px)
+Value (pt iOS)
+Common Use
+space-1  (xs)
+4px
+3pt
+Icon to text gap, badge padding
+space-2  (sm)
+8px
+6pt
+Inside chips/tags, compact list spacing
+space-3  (md)
+12px
+9pt
+List item vertical padding
+space-4  (base)
+16px
+12pt
+Standard component padding, card inner spacing
+space-5  (lg)
+20px
+15pt
+Section internal spacing
+space-6  (xl)
+24px
+18pt
+Between cards, between sections
+space-8  (2xl)
+32px
+24pt
+Section breaks, bottom nav height offset
+space-10  (3xl)
+40px
+30pt
+Screen-level top/bottom margins
+space-12  (4xl)
+48px
+36pt
+Hero section spacing, onboarding gaps
+space-16  (5xl)
+64px
+48pt
+Full-screen empty state spacing
+
+Component Spacing Standards
+Component
+Outer Margin
+Inner Padding
+Between Items
+Screen edges
+16px (left + right)
+—
+—
+Content cards
+16px margin
+16px padding
+12px gap
+List rows
+16px left indent
+14px top/bottom
+8px between rows
+Buttons (primary)
+—
+14px vertical, 20px horizontal
+12px when stacked
+Bottom tab bar
+0 margin
+12pt top padding
+Equal distribution
+Section headers
+0 margin
+20px bottom
+24px above next section
+Modal sheets
+0 margin
+24px all sides
+—
+
+Spacing Rule: Breathe More Than You Think
+ADHD users experience visual noise acutely. When in doubt, add more space. Every card should feel like it has room to breathe. Tight packing = overwhelm = abandonment.
+
+04  Component Library
+Every component is designed to reduce decision fatigue, give clear affordances, and produce dopamine-friendly micro-feedback. No component should feel unclear or demand thought.
+
+Cards
+
+Content Card — Standard
+Primary container for health information. One topic per card.
+Background:  White (#FFFFFF) with 1px border (#E5E7EB) and 12px corner radius
+Shadow:  0px 2px 8px rgba(0,0,0,0.06) — subtle depth, not dramatic
+Size:  Full-width (minus 16px screen margins). Height: auto (content-driven)
+Padding:  16px all sides
+Topic tag:  Top-left. Lavender bg, Purple text, 6px radius, 11pt Micro font
+Title:  Title Large (22pt Bold, Charcoal). Max 2 lines.
+Body text:  Body (16pt, 24pt line-height, Charcoal). Max 3 sentences.
+CTA:  Teal text link bottom-right: 'Learn More →' or 'Start Tracking →'
+Evidence badge:  Bottom-left. Amber chip: 'Evidence: High / Medium / Low'
+Tap state:  Scale to 0.97 + very slight shadow increase (200ms ease-out)
+
+Insight Card — AI / Pattern Recognition
+Surfaces connections between symptoms and cycles. Purple-accented.
+Background:  Lavender (#EDE8F7)
+Left accent:  4px solid Purple border on left edge
+Icon:  ✦ or 🔮 icon in Purple (24pt), top-left
+Header:  'Pattern Spotted' or 'Insight' in Purple, 13pt Caption, semibold
+Content:  1–2 sentences max. Title Medium (18pt) — should feel like a discovery
+Action:  Ghost button: 'See My History →' in Teal
+Animation:  Fade + slide-up on first appearance (350ms ease-out)
+
+Tracker Card — Daily Log
+Quick-tap symptom and mood logging. Dopamine-friendly: instant visual feedback.
+Background:  White with Mint (#E8F5F3) top accent strip (4px)
+Tap zones:  Minimum 44×44pt. Generous spacing between options.
+Input type:  Visual scale (1–5 with emoji) OR 3-option tap buttons (never text input)
+Selection state:  Teal fill + white check icon + gentle bounce (200ms)
+Label:  Short (2–3 words max). Title Medium (18pt)
+Completion:  Full-card Teal flash → settle to Mint bg. Shows ✓ 'Logged!' in 0.5s
+No-response state:  Mist background, no shame language (never 'You forgot to log')
+
+Today Card — Daily Overview
+The 'glanceable' card at the top of the Today screen. One key message.
+Background:  Purple → Soft Purple gradient
+Text color:  White for all text on this card
+Content:  One headline (cycle phase or focus tip), 1 sentence context
+Size:  Full-width, fixed height 140pt — always visible above fold
+Icon:  Phase icon (moon, sun, leaf, fire) — 32pt, top-right
+Progress ring:  Small cycle ring (32pt) showing phase position — bottom-right
+
+Buttons
+Button Type
+Background
+Text
+Size
+Use Case
+Primary
+Brand Purple
+White, 17pt Semibold
+56pt height, full-width or auto
+Main action on screen (1 per screen)
+Secondary
+Lavender
+Purple, 16pt Semibold
+48pt height
+Supporting actions
+Ghost
+Transparent + Purple border (1.5px)
+Purple, 16pt
+48pt height
+Tertiary or dismissal actions
+Teal Action
+Teal
+White, 16pt Semibold
+48pt height
+Confirmations, logging complete
+Danger
+Peach
+Coral, 16pt Semibold
+48pt height
+Destructive (delete, cancel — rare)
+Disabled
+Mist (#F3F4F6)
+Slate, 16pt
+Any height
+Action not yet available
+Icon Button
+Transparent
+Icon 24pt
+44×44pt minimum
+Navigation, close, share
+
+Button Rules
+	•	Maximum 1 primary button per screen — forces clear hierarchy
+	•	No button text longer than 4 words — keeps CTAs scannable
+	•	Corner radius: 12px for primary/secondary, 8px for ghost
+	•	Loading state: Replace text with spinner + disable tap — never freeze silently
+	•	Success state: Replace with '✓ Done' for 1.5s, then transition
+	•	All buttons minimum 44×44pt touch target (WCAG AA + Apple HIG)
+
+Input Fields & Forms
+Input Type
+Design
+ADHD Rule
+Text field
+16pt font, 52pt height, Lavender focus ring, clear label above
+Label ALWAYS above (never placeholder-only)
+Scale slider (1–5)
+Visual emoji labels, 48pt track height, Teal thumb
+Show value selected immediately
+Single select (chips)
+Horizontal scroll, tap-to-select, Purple selected state
+Limit to 5 options max
+Date picker
+iOS native wheel — do not custom build
+Never type a date manually
+Search
+Top-mounted, always visible, Charcoal text
+Show recent searches by default
+Toggle (on/off)
+iOS native switch, Teal when on
+Label always explains what 'on' means
+Multi-step form
+BANNED — break into separate screens (1 question per screen)
+Never put 2+ questions on one screen
+
+Progress & Streak Components
+Component
+Design Spec
+Interaction
+Cycle Ring
+Circular progress, 48pt outer, Purple arc on Mist track, phase icon center
+Tap → opens cycle detail screen
+Streak Counter
+Number (48pt Display, Purple) + flame icon + '_ days' label
+Animate count on open (spring)
+Streak Dots
+7 dots (past week). Teal = logged, Lavender = today, Mist = missed
+No red for missed — just empty/mist
+Progress Bar
+Full-width, 8pt height, Purple fill, rounded ends, Mist track
+Animated fill on load (350ms ease-out)
+Achievement Badge
+48pt hexagon, Amber fill, icon center, caption below
+Tap → celebration sheet with description
+Phase Tag
+Chip: phase name, phase icon, Lavender bg
+Static label — not interactive
+Evidence Tag
+Small chip: 'High / Med / Low Evidence', Amber or Teal or Coral
+Tap → explains evidence rating system
+
+05  Motion & Animation
+Motion in ADHD apps must be purposeful and calming. Animations confirm actions, guide attention, and reward completion — but never distract or loop endlessly.
+
+Timing Tokens
+Token
+Duration
+Easing
+Use Case
+motion-micro
+150ms
+ease-out
+State changes: button press, toggle, selection
+motion-fast
+200ms
+ease-out
+Tab bar transition, chip selection
+motion-standard
+300ms
+ease-out (entry) / ease-in (exit)
+Card appearance, modal open/close
+motion-slow
+450ms
+spring (tension 300, friction 30)
+Achievement unlock, streak milestone
+motion-emphasis
+600ms
+spring (tension 200, friction 25)
+Onboarding transitions, celebration burst
+
+Motion Rules
+Motion Type
+Rule
+Entry animations
+Elements slide in from bottom (16px offset) + fade from 0→1 opacity
+Exit animations
+Fade to 0 opacity only — no sliding out (prevents nausea)
+Scroll
+Momentum-based iOS natural scroll. No snap scrolling unless intentional.
+Loading
+Purple pulse animation (1.5s loop, ease-in-out) — NOT spinning wheel when possible
+Success feedback
+Teal card flash → settle. Haptic: medium impact. Duration: 300ms
+Error feedback
+Gentle horizontal shake (3px offset, 250ms, 2 cycles) — NOT screen flash
+Achievement
+Confetti burst (Lavender + Teal dots, 600ms) + haptic: success pattern
+Tab switch
+Content crossfade (200ms) — no sliding between tabs
+Reduced motion
+All animations fall back to instant opacity change. Respect prefers-reduced-motion.
+Looping animations
+NEVER loop animations indefinitely — maximum 3 cycles then stop
+
+06  iOS Native Components
+Use native iOS components wherever possible. They are accessible by default, familiar to users, and require no extra implementation. Override visuals only — never rebuild behavior.
+
+Native vs Custom
+Component
+Approach
+Customization
+Bottom Tab Bar (UITabBar)
+Native
+Purple selected icon, Charcoal unselected, Cream background
+Navigation Bar (UINavigationBar)
+Native
+Cream background, Charcoal title, Purple back arrow
+Alert / Action Sheet
+Native UIAlertController
+No customization — iOS native only
+Date Picker
+Native UIDatePicker
+Use '.inline' style for calendar view
+Search Bar (UISearchBar)
+Native
+Lavender background, Purple cursor
+Pull to Refresh
+Native UIRefreshControl
+Purple spinner tint
+Segmented Control
+Native UISegmentedControl
+Purple selected, Mist unselected
+Context Menu (long press)
+Native UIContextMenuInteraction
+Standard menu items only
+Share Sheet
+Native UIActivityViewController
+No customization
+Haptic Feedback
+UIImpactFeedbackGenerator
+Use .light for selections, .medium for confirmations, .success for achievements
+Bottom Sheet
+Custom — UISheetPresentationController (.medium)
+24px top padding, Cream bg, Purple handle
+Health Chart / Graph
+Custom — SwiftUI Charts or Swift Charts
+Purple line, Mist grid, Teal highlights
+Cycle Ring
+Custom — Core Animation / SwiftUI Shape
+Full custom per spec above
+
+Bottom Navigation — 4 Tabs
+Tab Structure (Left → Right)
+	•	TODAY  ·  House icon  ·  'Your daily snapshot — cycle phase, reminders, one tip'
+	•	LEARN  ·  Book icon  ·  'Health content library — cards by topic, evidence-backed'
+	•	TRACK  ·  Heart/Chart icon  ·  'Symptom tracker — quick-log, mood, patterns'
+	•	ME  ·  Person icon  ·  'Profile, settings, health history, subscription'
+
+Tab labels: always visible under icon. Never hide labels. ADHD users need text + icon — icon alone is not sufficient.
+
+07  Accessibility (a11y)
+Accessibility is not an add-on. For ADHD users, a11y features frequently overlap: large text support, reduced motion, and clear labels all directly benefit ADHD cognition.
+
+Color Contrast Requirements
+Text Pairing
+Contrast Ratio
+WCAG Level
+Status
+Charcoal (#2D2D2D) on Cream (#FFFEF9)
+13.8:1
+AA + AAA ✓
+✓ Passes
+White (#FFFFFF) on Purple (#5C3FA0)
+7.6:1
+AA + AAA ✓
+✓ Passes
+White (#FFFFFF) on Teal (#2A9D8F)
+4.8:1
+AA ✓
+✓ Passes
+White (#FFFFFF) on Coral (#E07060)
+3.1:1
+AA large text only
+⚠ Large text only (17pt+)
+Purple (#5C3FA0) on Lavender (#EDE8F7)
+4.7:1
+AA ✓
+✓ Passes
+Slate (#6B7280) on Cream (#FFFEF9)
+4.5:1
+AA ✓ (barely)
+✓ — Monitor closely
+Amber (#D97706) on Cream (#FFFEF9)
+3.2:1
+Fails at small sizes
+⚠ Use only 17pt+ or add dark background
+
+Touch Target Requirements
+Element
+Minimum Size
+Notes
+All interactive elements
+44×44pt
+Apple HIG + WCAG 2.5.5 requirement
+Primary buttons
+56pt height, full-width preferred
+Never shrink for aesthetics
+Tab bar items
+Equal distribution, 50pt+ each
+Native UITabBar handles this
+Tracker scale buttons
+48×48pt each
+Extra generous — frequently tapped
+Close/dismiss buttons
+44×44pt with hit extension
+Extend tap area beyond visual size
+Card tap areas
+Full card — not just title
+Entire card is the tap target
+List rows
+44pt height minimum
+Apple default ListRow handles this
+
+Dynamic Type Support
+Required: All Text Must Scale with iOS Dynamic Type
+	•	Support all Dynamic Type sizes: xSmall → AX5 (accessibility extra extra extra extra extra large)
+	•	Never lock font sizes — always use scalable font styles
+	•	Test at maximum size: no text truncation, no UI overflow
+	•	Cards must reflow vertically (not clip) at large sizes
+	•	Icons must scale proportionally with adjacent text
+
+VoiceOver Labels
+Component
+VoiceOver Label
+Hint
+Cycle ring
+'Cycle day 14 of 28. Ovulatory phase.'
+'Double tap to view full cycle calendar'
+Tracker log button
+'Log energy level: 3 out of 5'
+'Double tap to change your rating'
+Insight card
+'Insight: Your focus peaks mid-cycle'
+'Double tap to read full insight'
+Streak counter
+'Current streak: 7 days'
+'Double tap to view streak history'
+Evidence badge
+'Evidence level: High'
+'Double tap to learn what this means'
+Phase tag
+'Current phase: Luteal'
+'Double tap to learn about this phase'
+
+08  Dark Mode
+Dark mode is not an inversion of light mode. Each color must be purposefully reconsidered for dark contexts. ADHD users frequently prefer dark mode — it reduces visual noise.
+
+Dark Mode Color Mappings
+Light Mode Color
+Dark Mode Equivalent
+Notes
+Cream bg (#FFFEF9)
+Deep Dark (#1A1625)
+Warm dark, slightly purple-tinted — not pure black
+White card (#FFFFFF)
+Dark Card (#2A2438)
+Cards lift from bg — visible but not glaring
+Lavender (#EDE8F7)
+Dark Purple Accent (#3D2A70)
+Maintains purple identity in dark
+Charcoal text (#2D2D2D)
+Soft White (#F0EEFF)
+Off-white — easier on eyes than pure white
+Slate text (#6B7280)
+Medium Grey (#9CA3AF)
+Secondary text maintains contrast
+Brand Purple (#5C3FA0)
+Soft Purple (#9B7FD4)
+Lightened for dark bg contrast
+Teal (#2A9D8F)
+Light Teal (#4EC4B8)
+Brightened slightly for dark bg visibility
+Coral (#E07060)
+Soft Coral (#F4A090)
+Lightened — still warm, not alarming
+Border (#E5E7EB)
+Dark Border (#3F3553)
+Subtle separation on dark surfaces
+
+Dark Mode Rules
+	•	Always use iOS adaptive colors (system colors) — they handle light/dark automatically
+	•	Never manually switch colors based on interface style — use asset catalog color sets
+	•	Shadows become lighter glows in dark mode (0% opacity shadows, replace with subtle borders)
+	•	Purple accent stays slightly lighter (#9B7FD4) to maintain contrast on dark backgrounds
+	•	Test every screen in both modes — do not assume automatic inversion looks correct
+	•	Status bar: light content on dark backgrounds (automatic via iOS)
+
+
+Design System v1.0 · ADHD Women's Health App
+All decisions documented here are grounded in ADHD neuroscience and evidence-based UX research

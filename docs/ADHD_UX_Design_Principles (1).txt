@@ -1,0 +1,445 @@
+
+ADHD UX Design Principles
+Foundation Document
+ADHD Women's Health App  |  Version 1.0  |  March 2026
+What this document is
+The ground rules for everything we build. Every screen, every interaction, every word of copy in this app must pass these principles. This is not a style guide — it is a cognitive design system built around how ADHD brains actually work.
+
+Why ADHD-first design matters
+Standard app design is optimized for neurotypical users. ADHD brains face real neurological differences: dopamine dysregulation, executive dysfunction, working memory limitations, and time blindness. Designing around these is not accessibility — it is the product. Get this right and you have something no competitor has built.
+
+
+How the ADHD Brain Works
+Before we design anything, we must understand what we are designing for. Every principle in this document traces back to one of these six neurological realities.
+
+ADHD Challenge
+What it means for design
+Dopamine dysregulation
+The brain under-produces or mismanages dopamine — the neurotransmitter that drives motivation, reward, and task initiation. Users need instant, clear rewards to start and continue tasks.
+Executive dysfunction
+Difficulty planning, initiating, sequencing, and completing tasks. Users need the app to do the planning for them — one clear next step at a time.
+Working memory limits
+Short-term memory for holding and manipulating information is impaired. Users cannot remember what they were doing if the app interrupts them or hides context.
+Time blindness
+Poor perception of time passing. Users do not feel the difference between 5 minutes and 2 hours. Everything needs a time estimate. Nothing should feel open-ended.
+Rejection sensitivity
+Heightened emotional response to perceived failure or judgment. Red streaks, failure messages, and pushy notifications cause users to abandon the app entirely.
+Hyperfocus potential
+ADHD brains can reach deep states of flow on tasks they find engaging. Design must support and not interrupt this state — and make it easy to re-enter after breaks.
+
+
+Principle 01  /  Executive Dysfunction
+One Thing at a Time
+Every screen has exactly one purpose. Every moment, the user knows exactly what to do next.
+
+Executive dysfunction means the ADHD brain struggles to decide between multiple options. When a screen presents three, four, or five things to do — the user does none of them. Decision paralysis is not laziness. It is a neurological response to competing stimuli.
+
+The Rule
+	•	Each screen has ONE primary action. Everything else is secondary or hidden.
+	•	If a screen has more than one CTA button, one of those buttons should not be there.
+	•	Navigation is always visible, but the current screen never competes with the nav.
+	•	Modal popups should only appear when the user triggered them — never auto.
+
+Design Rules
+✓  DO THIS
+One primary button per screen, full width, high contrast. Secondary action is a text link — smaller, lower on screen.
+✗  AVOID THIS
+Two equal-weight buttons next to each other. The brain cannot choose and freezes.
+
+
+
+✓  DO THIS
+Show content progressively — summary first, more available on tap if the user wants it.
+✗  AVOID THIS
+Display all information at once. A wall of text triggers immediate avoidance.
+
+
+
+✓  DO THIS
+Daily check-in is a single-screen flow. One question. One tap. Done.
+✗  AVOID THIS
+A multi-page form with required fields and a progress bar counting from 1 of 7.
+
+
+
+Real Example — Today Screen
+The Today screen shows: the daily check-in card (primary CTA), today's cycle day, and one featured insight. That is it. No news feed, no notification inbox, no stats panel. The user knows exactly what to do the moment the app opens.
+
+
+Principle 02  /  
+Dopamine Dysregulation
+Instant Dopamine Hits
+Completing any action — no matter how small — feels immediately good.
+
+ADHD brains are motivated by immediate reward, not distant outcomes. A progress bar that fills up, a satisfying tap animation, a "You did it" micro-celebration — these are not nice-to-haves. They are the mechanism that brings users back tomorrow.
+
+The Rule
+	•	Every completed action gets an immediate, visible response. No silent confirmations.
+	•	The check-in completion must feel rewarding — animation, color change, affirming copy.
+	•	Streaks are shown as a positive — "5 days going" not "0 days missed."
+	•	Progress is always shown as what was gained, never what remains.
+
+Design Rules
+✓  DO THIS
+After completing the daily check-in: full-screen celebration animation (1.5 seconds), affirmation copy ("Done. You showed up today."), then auto-advance to the insight.
+✗  AVOID THIS
+A small toast notification that says "Saved" in grey at the bottom of the screen.
+
+
+
+✓  DO THIS
+Streak counter: "You've checked in 6 days in a row" — warm color, upward arrow icon.
+✗  AVOID THIS
+Streak counter: "6 day streak — don't break it!" — pressure language triggers avoidance.
+
+
+
+✓  DO THIS
+If the user misses a day, the streak resets silently. No red indicators, no "You broke your streak" message. Just quietly starts fresh.
+✗  AVOID THIS
+Red X on the streak card. "Streak lost. Start again." This causes users to abandon the app permanently.
+
+
+
+Dopamine Design Stack
+Tap → Haptic feedback → Visual animation → Affirming copy → Progress update. All four layers fire within 300ms. The user's brain registers completion as a reward cycle — increasing the probability of returning tomorrow.
+
+
+Principle 03  /  
+Working Memory Limits
+Never Make Them Remember
+The app carries the context. The user never has to remember where they were.
+
+Working memory — the ability to hold information in mind while doing something else — is impaired in ADHD. If a user taps away from a screen, they have likely forgotten what they were doing. The app must restore their context instantly and automatically.
+
+The Rule
+	•	The app always shows the user where they are — tab label, screen title, and back button context.
+	•	If the user exits mid-task, the app saves their progress automatically. No data is ever lost.
+	•	When the user returns to the app, show a "Welcome back" card summarizing what they last did.
+	•	Confirmation screens always summarize what was just completed before moving forward.
+	•	Never use icon-only navigation without a text label. Icons alone require memory to decode.
+
+Design Rules
+✓  DO THIS
+Navigation tabs always show icon + text label. Tab 2 says 'Library' not just a book icon.
+✗  AVOID THIS
+Icon-only navigation. The user must remember what each icon means every single time.
+
+
+
+✓  DO THIS
+When returning to the Tracker after 3 days away: show a card that says "Last check-in was Tuesday. Want to pick up where you left off?"
+✗  AVOID THIS
+Return the user to the empty check-in form with no context about their last session.
+
+
+
+✓  DO THIS
+After the user taps into a Library topic and then hits back: highlight the topic card they were just reading with a subtle "Continue reading" badge.
+✗  AVOID THIS
+Return the user to the top of the Library list with no indication of where they were.
+
+
+
+Content Length Rule
+Every piece of content shows a time estimate. "3 min read." "2-minute check-in." This removes the open-ended anxiety that stops ADHD users from starting. Known time = startable task. Unknown time = avoidance.
+
+
+Principle 04  /  
+Attention & Overwhelm
+Reduce Cognitive Load to Zero
+No unnecessary choices. No visual clutter. Every pixel earns its place.
+
+Cognitive load is the mental effort required to use a screen. For ADHD brains, high cognitive load — too many choices, cluttered layouts, unclear hierarchy — causes immediate disengagement. The solution is ruthless simplicity.
+
+The Rule
+	•	Maximum 3 items in any group before offering a "See more" option.
+	•	Maximum 5 choices in any selection or menu.
+	•	White space is not wasted space. It is the rest the brain needs between elements.
+	•	Never show two equally weighted things side by side. One must be primary.
+	•	Typography hierarchy must be extreme — the most important text is significantly larger.
+
+Design Rules
+✓  DO THIS
+Library topic grid: 3 cards visible, soft scroll to reveal more. Each card has topic name, one-line summary, and a time estimate.
+✗  AVOID THIS
+A scrollable list of 20 topic tiles with title, icon, subtitle, category tag, and last-updated date all visible at once.
+
+
+
+✓  DO THIS
+Onboarding condition selection: show 6 tiles in a 2x3 grid. Large text, single icon. User taps to select.
+✗  AVOID THIS
+A long scrollable list of 30 health conditions with checkboxes, descriptions, and a search bar that must be used.
+
+
+
+✓  DO THIS
+Settings screen: 5 grouped items with clear section headers. Each item is a single toggle or single-tap action.
+✗  AVOID THIS
+A settings screen with 25 individual options, some with sub-menus, and a mix of toggles, dropdowns, and text inputs.
+
+
+
+Typography Hierarchy Rules
+Element
+Size
+Why
+Screen title
+28–32pt
+Immediately orients the user — largest text on screen
+Section header
+20–22pt
+Groups content visually without competing with title
+Body / card content
+16–18pt
+Comfortable reading size — never smaller for key info
+Labels / captions
+13–15pt
+Secondary info — visually quiet, not competing
+Time estimates
+13pt, muted color
+Present but non-intrusive — answers 'how long?'
+
+
+Principle 05  /  
+Rejection Sensitivity & Emotional Regulation
+Never Shame. Always Encourage.
+The app is a calm, supportive presence — not a productivity tracker judging the user.
+
+ADHD brains experience rejection sensitivity dysphoria (RSD) — an intense emotional response to perceived failure or criticism. A red empty streak card, a passive-aggressive push notification, or copy that implies the user 'should have' done something will cause permanent abandonment.
+
+The Rule
+	•	Zero red indicators for missed activity — ever.
+	•	Streaks reset silently, with no message. The first return after a break gets a warm welcome, not a guilt trip.
+	•	Push notifications use curiosity and warmth, never urgency or pressure.
+	•	Empty states feel inviting, not empty. They tell the user what they will gain, not what is missing.
+	•	Every error message is calm, explains what happened, and gives a clear next step.
+
+Copy Rules — Notification Language
+✓  DO THIS
+"Hey — your body tracked something interesting this week. Want to see?"
+✗  AVOID THIS
+"You haven't checked in for 3 days. Don't lose your streak!"
+
+
+
+✓  DO THIS
+"Good morning. Today might be a high-focus day based on your cycle. Check in when you're ready."
+✗  AVOID THIS
+"REMINDER: Daily check-in not completed. Complete now →"
+
+
+
+✓  DO THIS
+Empty tracker state: "Your pattern is just getting started. Check in today to begin seeing what your body is telling you."
+✗  AVOID THIS
+Empty tracker state: "No data yet. You haven't tracked anything."
+
+
+
+Copy Rules — Error States
+✓  DO THIS
+"Something went wrong on our end. Your check-in was saved — just tap to continue."
+✗  AVOID THIS
+"Error 403. Request failed. Try again."
+
+
+
+Tone of Voice
+The app speaks like a knowledgeable friend — warm, direct, non-alarmist. It never uses clinical detachment or corporate formality. It never uses guilt. It never implies the user is behind. It celebrates every single action, no matter how small.
+
+
+Principle 06  /  
+Sensory Sensitivity & Attention
+Calm Visual Environment
+The app never overstimulates. Color and motion are purposeful, not decorative.
+
+Many ADHD brains are also highly sensitive to visual and auditory stimulation. Bright, saturated colors, fast animations, and flashing notifications can be genuinely disruptive. The visual design must create a calm, focused environment.
+
+Color System Rules
+Role
+Color
+Hex
+Usage
+Primary brand
+Soft purple
+#5C3FA0
+CTAs, tab active state, headings
+Success / positive
+Muted teal
+#2A9D8F
+Completions, streaks, positive data
+Warning / flag
+Warm amber
+#D97706
+Gentle alerts — never urgent
+Background
+Off-white
+#F9FAFB
+All screen backgrounds — never pure white
+Surface / card
+White
+#FFFFFF
+Card backgrounds, elevated content
+Text primary
+Near-black
+#1F2937
+Body text — high contrast, never pure black
+Text secondary
+Medium grey
+#6B7280
+Captions, time labels, secondary info
+Never use
+Bright red
+#FF0000
+Red = failure = rejection trigger. Banned.
+Never use
+Bright orange
+#FF6600
+Too stimulating — avoid for primary elements
+Never use
+Neon or fluorescent
+—
+Any highly saturated color as a primary element
+
+Motion & Animation Rules
+	•	Animations are short (150–300ms max) and purposeful — they confirm an action, not decorate.
+	•	No looping animations on idle screens. Motion only happens when triggered by the user.
+	•	All animations respect the device's "Reduce Motion" accessibility setting.
+	•	No auto-playing video or audio. Ever.
+	•	Haptic feedback is used for completions and selections — light, satisfying, not jarring.
+
+
+Principle 07  /  
+Time Blindness
+Make Time Visible
+Label everything with how long it takes. Remove all open-ended time anxiety.
+
+For ADHD brains, tasks without a defined time feel infinite and therefore unstarrable. The solution is to make time visible on every piece of content, every action, every flow.
+
+The Rule
+	•	Every content card shows a read time. "3 min read."
+	•	The daily check-in button shows how long it takes. "2-min check-in"
+	•	Onboarding shows step count and estimated time. "Step 2 of 3 • About 4 minutes total"
+	•	Every time estimate is accurate. Never round up aggressively — users will notice and distrust.
+	•	After a flow is completed, show actual time taken. "Done in 1 min 47 sec." — this builds accurate time perception.
+
+✓  DO THIS
+Library card: topic name, one-line summary, "4 min read" in a muted label. User knows exactly what they are committing to.
+✗  AVOID THIS
+Library card with no time label. The user hovers, afraid to tap because they do not know if reading this will take 2 minutes or 20.
+
+
+
+Time Estimates Build Trust
+When a user checks in and the app says '2-min check-in' — and it actually takes 2 minutes — they learn to trust the app. That trust is the foundation of daily habit formation, which is the foundation of your revenue model.
+
+
+Principle 08  /  
+Dopamine & Habit Formation
+Build the Habit Loop
+The app is designed to become a daily habit — through ritual, not guilt.
+
+James Clear's habit loop: Cue → Routine → Reward. For ADHD users, each step of this loop must be deliberately designed, because the neurotypical habit loop often fails for them.
+
+Stage
+What it is
+How we design it
+CUE
+The trigger that initiates the habit
+Daily notification at the user's chosen time. Warm, curious tone. Not a reminder — an invitation.
+ROUTINE
+The behavior itself (the check-in)
+Check-in is fast, single-screen, frictionless. 3–5 taps maximum. Feels effortless.
+REWARD
+The payoff that reinforces return
+Immediate animation + copy. New insight revealed. Streak updated. Dopamine delivered.
+INVESTMENT
+What makes tomorrow more likely
+Personalized patterns improve over time. The more data, the better the insights. The app gets more valuable the longer they use it.
+
+
+Anti-Patterns: Never Build These
+These are the design patterns most commonly found in health and productivity apps that are specifically harmful to ADHD users. Ban all of them.
+
+Anti-Pattern
+Why it fails ADHD users
+What to do instead
+Endless scroll
+No clear stopping point — triggers hyperfocus or complete disengagement
+Paginate content. Show 3–5 items. 'See more' is a deliberate tap.
+Red streak indicators
+Triggers rejection sensitivity and permanent abandonment
+No red. Missed days reset silently. First return gets a warm welcome.
+Multi-step onboarding (5+ screens)
+Cognitive overload before first value. High drop-off.
+3 screens max for onboarding. Value first, settings later.
+Auto-playing media
+Unprompted sensory input disrupts focus
+Never auto-play. All media is tap-to-start.
+Daily active notification barrages
+Multiple notifications per day = training users to mute the app
+One notification per day, at a time the user chose.
+Buried navigation (hamburger menus)
+Requires memory to navigate. Hidden options don't get used.
+Bottom tab nav, always visible, max 4 tabs.
+Walls of text
+Triggers immediate avoidance in ADHD brains
+Max 5 sentences per section. Summary always first. Progressive disclosure.
+Guilt-based copy
+'You haven't checked in for 5 days' — shame spiral
+Curiosity-based: 'Something interesting happened this week — want to see it?'
+Forms with more than 3 fields
+Task paralysis. User abandons halfway.
+Split into single-question screens or eliminate fields entirely.
+Punishment for inactivity
+Losing features, badges, or status for not using app
+Features are always available. Engagement is celebrated, not enforced.
+
+
+ADHD UX Design Checklist
+Before any screen ships, it must pass every item on this checklist. This is not optional.
+
+How to use this checklist
+Print this or keep it open in Figma. Every screen — from onboarding to settings — runs through every question. A single 'No' answer means the screen needs revision before it ships.
+
+Focus & Clarity
+	•	Does this screen have exactly ONE primary action?
+	•	Is the most important element visually dominant — much larger than everything else?
+	•	Can a user understand what to do within 3 seconds of seeing this screen?
+	•	Is there generous white space between elements?
+	•	Are there fewer than 5 choices in any selection or menu?
+
+Working Memory
+	•	Does the screen show where the user is in the app (tab active, screen title, back context)?
+	•	If this screen is part of a flow, is the step count and progress shown?
+	•	If the user has used this area before, is their last activity shown or referenced?
+	•	Does every icon have a visible text label?
+
+Time Awareness
+	•	Does every piece of content show a time estimate?
+	•	Does every multi-step flow show total estimated time upfront?
+	•	Is no task, flow, or content item presented as open-ended?
+
+Reward & Motivation
+	•	Does completing any action provide immediate visual and/or haptic feedback?
+	•	Is the user's progress shown in a positive way (what was gained, not what remains)?
+	•	Is there zero use of red for missed activity, empty states, or errors?
+	•	Does the empty state feel inviting (not empty or accusatory)?
+
+Tone & Copy
+	•	Is all copy warm, direct, and non-judgmental?
+	•	Does every notification use curiosity or warmth — never urgency or pressure?
+	•	Does every error message explain what happened and give a clear next step?
+	•	Is there zero use of 'should', 'haven't', 'missed', or 'failed'?
+
+Sensory Design
+	•	Does all color usage follow the defined palette? (no bright red, neon, or fluorescent)
+	•	Are animations under 300ms and triggered only by user action?
+	•	Does the screen respect the device's Reduce Motion setting?
+	•	Is there no auto-playing audio or video?
+
+
+These principles are the product.
+Everything else — the women's health content, the tracker, the library — sits on top of this foundation. Get the UX wrong and the content does not matter. Get it right and you have built something that actually works for the people who need it most.

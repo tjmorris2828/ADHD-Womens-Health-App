@@ -1,0 +1,303 @@
+ADHD Women's Health App
+Product Plan & Build Roadmap
+Version 1.0  |  March 2026
+What this document covers
+This plan defines the product vision, MVP scope, content architecture, tech stack options, monetization model, and immediate next steps for building a research-backed women's health intelligence app designed for ADHD minds.
+
+
+1. Product Vision
+A structured, ADHD-accessible health intelligence platform where women understand their body patterns, make informed decisions, and track health changes over time. This is not a blog. It is a research-backed, organized knowledge system.
+
+Core Promise
+	•	Evidence-based women's health content — organized, not overwhelming
+	•	Built for ADHD brains: short, visual, action-oriented
+	•	Pattern recognition: connect symptoms, hormones, cycle, and lifestyle
+	•	Not diagnostic — educational and empowering
+
+Target User
+Who
+Women ages 25–45 with ADHD traits or executive dysfunction
+Pain Point
+Overwhelmed by fragmented, dense medical information — no clear starting point
+Desire
+To understand their own body, find patterns, and feel less alone
+Device
+iOS mobile — daily use, habit building, on-the-go access
+
+
+2. MVP Scope — What You're Building First
+MVP Focus (agreed)
+Content Library + Symptom Tracker. The goal is to deliver enough value that users open the app daily and begin to see their own health patterns.
+
+2.1 What's In the MVP
+Feature 1: Content Library
+	•	Topics organized by health area (not alphabetically — by relevance)
+	•	Each topic contains a structured 'knowledge card':
+	•	Quick Summary: 3–5 bullets, plain language
+	•	ADHD Connection: how this topic affects ADHD symptoms
+	•	Pattern Spotters: what to track and watch for
+	•	Evidence Rating: labeled by strength (Research-backed / Expert consensus / Emerging)
+	•	Western vs. Functional vs. Eastern Medicine view (where applicable)
+	•	Action Steps: 2–3 concrete things to do or ask your doctor
+
+	•	Topic list for MVP launch:
+	•	Hormonal cycles & ADHD
+	•	PMDD
+	•	PCOS
+	•	Perimenopause & executive dysfunction
+	•	Thyroid & cognition
+	•	Mental health & ADHD overlap
+	•	Stress & inflammation
+
+Feature 2: Symptom Tracker
+	•	Daily check-in (2–3 min max — ADHD-friendly brevity)
+	•	Track daily: mood, energy, focus, cycle day, sleep hours, key symptoms
+	•	Pattern view: weekly chart showing correlations (e.g., focus dips at cycle day 21–28)
+	•	Export: simple summary for doctor appointments
+
+Feature 3: Onboarding & Profile
+	•	3-screen onboarding: select conditions/interests, set tracking preferences
+	•	Personalized content feed based on selected conditions
+	•	Reminder setting for daily check-in
+
+2.2 What's NOT in MVP (Save for v2)
+Feature
+Why defer
+AI recommendations
+High complexity, regulatory sensitivity
+Community / social features
+Moderation overhead
+Apple Health integration
+Adds build complexity, v2 priority
+Practitioner / provider portal
+B2B revenue stream, Phase 2
+Full research database / citations
+Content depth, add incrementally
+
+
+3. App Architecture
+3.1 Navigation Structure
+The app uses a 4-tab bottom navigation — simple, ADHD-friendly, no buried menus.
+
+Tab
+Name
+What it contains
+Tab 1
+Today
+Daily check-in, today's cycle info, top insight of the day
+Tab 2
+Library
+Health topic cards organized by category; search + filter
+Tab 3
+Tracker
+Symptom history, weekly/monthly pattern charts, export view
+Tab 4
+Profile
+Conditions, notification settings, subscription, account
+
+3.2 Content Card Structure
+Every knowledge card in the Library follows the same ADHD-friendly format:
+
+Topic Card Format (repeating template for every health topic)
+Summary first (3–5 bullets) → ADHD Connection → Pattern Spotters → Evidence Rating → Action Steps → Medicine Comparison
+
+
+4. Tech Stack Options
+You're starting from zero without a developer team. Here are three realistic paths, ordered by build complexity.
+
+Option A: No-Code First (Recommended Starting Point)
+Best for: Validating your concept before spending on development. Fastest to get real user feedback.
+Use Glide Apps or Bubble.io to build a working prototype in weeks, not months.
+
+	•	Tools: Glide Apps (mobile-first, no code) or Bubble.io (web, no code)
+	•	Timeline: 4–8 weeks to working prototype
+	•	Cost: $100–500/month subscription, no developer needed
+	•	Limitation: Not a native iOS app — web-based or limited native wrapper
+	•	Use this to: test content structure, validate daily tracking habit, get first 100 users
+
+Option B: React Native + Expo (Recommended for iOS Build)
+Best for: Building the real iOS app. Cross-platform (iOS today, Android later). Large developer community.
+You'll need to hire a developer — this is the path to the App Store.
+
+	•	Tech: React Native + Expo + Supabase (backend) + Expo Router (navigation)
+	•	Timeline: 3–5 months for MVP with 1 developer
+	•	Cost: $15,000–$40,000 with a freelance/contract developer
+	•	App Store ready: Yes — submits to Apple App Store
+	•	Future-proof: Add Android later with same codebase
+
+Option C: Native SwiftUI (Premium iOS Only)
+	•	Tech: SwiftUI + Supabase or Firebase
+	•	Timeline: 4–6 months with a Swift developer
+	•	Cost: $25,000–$60,000+
+	•	Best performance: Yes — but iOS only forever
+	•	Harder to find developers: Swift specialists cost more
+
+Recommendation
+Start with Option A (no-code prototype) to validate your content and user behavior. Once you have 50–100 active users and proof of concept, move to Option B (React Native) for the real iOS app. This reduces risk and cost significantly.
+
+4.1 Recommended Tech Stack (Option B - Full Build)
+Layer
+Tool
+Why
+Mobile App
+React Native + Expo
+iOS now, Android later
+Backend / Database
+Supabase
+Open source, free tier, auth included
+Content Management
+Airtable or Notion
+Non-dev friendly, easy to update content
+Authentication
+Supabase Auth
+Built-in, secure
+Payments / Subscriptions
+RevenueCat
+Industry standard for iOS in-app subs
+Analytics
+Mixpanel (free tier)
+Track usage patterns
+Notifications
+Expo Push Notifications
+Daily check-in reminders
+Design
+Figma
+UI mockups before development
+
+
+5. Content Strategy
+Content is the core product. The app lives or dies by content quality, accuracy, and ADHD-friendly presentation.
+
+5.1 Research Sources
+	•	PubMed / NIH — peer-reviewed studies (label: Research-Backed)
+	•	ACOG, Endocrine Society, APA — clinical guidelines (label: Expert Consensus)
+	•	Cleveland Clinic Functional Medicine, IFM — functional approach (label: Functional Medicine)
+	•	Peer-reviewed TCM journals — eastern medicine (label: Traditional / Eastern)
+	•	University health centers (Harvard, Mayo, Johns Hopkins) — credible summaries
+
+5.2 Content Creation Workflow
+	•	Research topic using primary sources (PubMed, clinical guidelines)
+	•	Summarize key findings into ADHD-friendly format (short, visual, action-oriented)
+	•	Label evidence strength for every claim
+	•	Add ADHD connection and pattern-spotting guidance
+	•	Medical review — have a licensed practitioner review before publishing
+	•	Publish to app via CMS (Airtable or Notion)
+
+Risk: Medical Content Liability
+Always include clear disclaimers: 'This is educational, not medical advice.' Never use diagnostic language. Have a licensed healthcare provider review all content before publishing. Consider consulting a health law attorney for your Terms of Service.
+
+5.3 Content Volume for MVP Launch
+	•	7 full topic cards (one per health area listed in Section 2.1)
+	•	30 days of tracking data schema built and ready
+	•	5–7 pattern insights pre-written (shown after 2+ weeks of tracking)
+
+
+6. Monetization Model
+6.1 Freemium Subscription
+Free Tier
+Premium ($9.99/mo or $79.99/yr)
+	•	3 topic cards
+	•	7-day symptom tracker
+	•	Basic daily check-in
+	•	Full library (all topics)
+	•	Unlimited tracking + history
+	•	Pattern insights + charts
+	•	Doctor appointment export
+	•	New content first access
+
+Why freemium for ADHD users?
+ADHD users need to experience value before they commit. Free access builds the habit loop. Premium conversion happens after they see their own patterns emerge — usually weeks 2–4. Annual plans reduce churn significantly for this audience.
+
+6.2 Revenue Projections (Conservative)
+Milestone
+Users / Conversion
+Monthly Revenue
+Month 3
+500 users, 5% paid
+~$250
+Month 6
+2,000 users, 8% paid
+~$1,600
+Month 12
+8,000 users, 10% paid
+~$8,000
+Month 18
+20,000 users, 12% paid
+~$24,000
+
+6.3 Future Revenue Streams (Phase 2+)
+	•	Practitioner portal — B2B subscription for healthcare providers ($49–99/mo per provider)
+	•	Doctor visit export — premium PDF report generation
+	•	Sponsored educational content — clearly labeled, from vetted brands only
+
+
+7. Key Risks & Mitigations
+Risk
+Impact
+Mitigation
+Medical liability
+HIGH
+Clear disclaimers; no diagnostic language; legal review of ToS; medical advisor sign-off
+App Store rejection
+MEDIUM
+Follow Apple Health guidelines; no diagnostic claims; proper age rating
+HIPAA / health data privacy
+HIGH
+No PHI collection in MVP; privacy-first design; consult health data attorney
+Content accuracy
+MEDIUM
+Evidence labeling system; licensed reviewer; clear source attribution
+User retention (ADHD)
+MEDIUM
+Push notification reminders; short check-in friction; habit-building design
+Developer cost overrun
+MEDIUM
+Start with no-code to validate; fixed-price dev contracts; phased build
+
+
+8. Immediate Next Steps
+Ordered by priority. Complete each step before moving to the next.
+
+Your goal in the next 30 days
+Validate that real users want this — before spending on development. This saves tens of thousands of dollars and confirms your concept.
+
+Week 1–2: Content Validation
+	•	Build 2–3 sample topic cards in Notion or Airtable in the exact ADHD-friendly format (Summary → ADHD Connection → Pattern Spotters → Action Steps)
+	•	Share with 5–10 women in ADHD communities (Reddit: r/ADHDwomen, Facebook groups)
+	•	Collect feedback: Is this format helpful? What's missing? Would you pay for this?
+
+Week 2–3: Prototype
+	•	Set up a Glide App or Airtable interface with your sample content
+	•	Add a simple daily check-in form (Google Form or Airtable form)
+	•	Invite 10–20 beta users to test for 2 weeks
+
+Week 3–4: Legal & Business Foundation
+	•	Register your business entity (LLC recommended)
+	•	Consult a health law attorney on: medical disclaimer language, Terms of Service, privacy policy, HIPAA considerations for health tracking data
+	•	Purchase your domain name
+
+Week 4+: Build Decision
+	•	Analyze beta feedback — is content format validated? Are users tracking daily?
+	•	If yes: scope your dev budget and post for a React Native developer (Toptal, Upwork, or a dev agency)
+	•	If no: iterate on content format and repeat validation
+
+
+9. What I Need From You to Keep Building
+To continue building out detailed specs, designs, and content — here's what will unblock each next deliverable:
+
+What I can build next
+What I need from you
+Full content card templates (all 7 topics)
+Confirm you want me to write the actual content, or just the templates
+App wireframes / screen layouts
+Confirm budget path (no-code vs. native iOS)
+Developer job post / brief
+Budget range you're working with
+Legal disclaimer templates
+Your business name / entity name
+Beta tester outreach script
+Ready to go — I can write this now
+Airtable / Glide prototype setup guide
+Ready to go — I can write this now
+
+Built with intention. Designed for ADHD minds.
